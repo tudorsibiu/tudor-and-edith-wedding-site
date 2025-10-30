@@ -1,34 +1,222 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tudor & Edith's wild wedding in Apuseni Mountains, Romania">
-    <title>Tudor & Edith | Apuseni Wild Wedding</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edith &amp; Tudor — Nuntă</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div>
-            <h1>Tudor &amp; Edith</h1>
-            <p class="date">July 15, 2026 | Apuseni Wild, Romania</p>
-            <p style="color: #F5F5DC; font-size: 1.2em;">Love as untamed as the Carpathians</p>
+  <a class="skip-link" href="#main">Sari la conținut</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Edith &amp; Tudor</a>
+      <nav class="nav" aria-label="Navigație principală">
+        <a href="#story">Povestea noastră</a>
+        <a href="#program">Program</a>
+        <a href="#cazare">Cazare</a>
+        <a href="#gallery">Galerie</a>
+        <a class="rsvp-button" href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Meniu</button>
+    </div>
+    <div id="nav-menu" class="mobile-menu" hidden>
+      <a href="#story">Povestea noastră</a>
+      <a href="#program">Program</a>
+      <a href="#cazare">Cazare</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="hero-decor" role="img" aria-hidden="true">
+        <!-- Decorative SVG gradient -->
+        <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <defs>
+            <linearGradient id="hg" x1="0" x2="1">
+              <stop offset="0" stop-color="#F6F1EB"/>
+              <stop offset="1" stop-color="#E9E3DB"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="600" fill="url(#hg)"/>
+          <g fill="#E3D9CF" opacity="0.35">
+            <ellipse cx="300" cy="380" rx="420" ry="140"/>
+            <ellipse cx="900" cy="220" rx="360" ry="110"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <h1>Edith &amp; Tudor</h1>
+        <p class="date">12 iunie 2026 • Apuseni Wilderness</p>
+        <p class="lead">Ne căsătorim — vă invităm să ne fiți alături într-o zi în aer liber, cu muzică, mâncare bună și multă bucurie.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#program">Detalii</a>
+          <a class="btn ghost" href="#contact">Contact</a>
         </div>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="venue.html">Venue</a>
-        <a href="rsvp.html">RSVP</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>
-    <section>
-        <h2>Welcome to the Wild</h2>
-        <p>Engineer + Doctor = A lifetime of building and healing, celebrated in the heart of Apuseni's ancient forests. Expect rugged trails, starlit vows, and love that runs deeper than any river.</p>
+      </div>
     </section>
-    <footer>
-        <p>© 2026 Tudor &amp; Edith | Wild hearts, engineered & healed</p>
-    </footer>
+
+    <section class="container story" id="story">
+      <h2>Povestea noastră</h2>
+      <div class="story-grid">
+        <div class="story-text">
+          <p>Edith și Tudor s-au cunoscut într-o zi ploioasă și, de atunci, fiecare aventură i-a apropiat. După ani de călătorii, râsete și prietenii comune, sărbătorim începutul acestei noi călătorii împreună, la Apuseni, în mijlocul naturii.</p>
+          <p>Vă așteptăm cu drag să ne fiți alături pentru ceremonie, cină și dans sub cerul liber.</p>
+        </div>
+        <div class="story-photo" aria-hidden="true">
+          <!-- Inline SVG placeholder: replace later with your photo -->
+          <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <rect width="100%" height="100%" fill="#EEE7E0"/>
+            <rect x="20" y="20" width="560" height="240" rx="10" fill="#E1D6CB"/>
+            <rect x="20" y="280" width="220" height="24" rx="4" fill="#D3C6BB"/>
+            <rect x="260" y="280" width="200" height="24" rx="4" fill="#D3C6BB"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="container program" id="program">
+      <h2>Program</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Ceremonia</h3>
+          <p>12 iunie 2026 — ora 15:00</p>
+          <p>Loc: Apuseni Wild — Poiana principală</p>
+        </li>
+        <li>
+          <h3>Recepție</h3>
+          <p>Imediat după ceremonie — cină și dans</p>
+          <p>Dress code: Smart casual</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container cazare" id="cazare">
+      <h2>Cazare &amp; transport</h2>
+      <p>Cel mai apropiat oraș: [completați]. Recomandăm pensiuni locale sau camping la fața locului — locuri limitate. Vom oferi transfer din centrul orașului; detalii practice vor fi trimise prin WhatsApp invitaților confirmați.</p>
+      <a class="link" href="https://maps.google.com/?q=Apuseni+Wild" target="_blank" rel="noopener">Deschide în Google Maps</a>
+    </section>
+
+    <section class="container gallery" id="gallery" aria-label="Galerie foto">
+      <h2>Galerie</h2>
+      <div class="masonry" id="gallery-grid" aria-live="polite">
+        <!-- Placeholder items. Replace data-full with real image URLs later -->
+        <button class="gallery-item" data-full="" aria-label="Fotografie 1">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <rect width="100%" height="100%" fill="#F4EEE6"/>
+            <circle cx="200" cy="140" r="80" fill="#E1D6CB" opacity="0.8"/>
+          </svg>
+        </button>
+        <button class="gallery-item" data-full="" aria-label="Fotografie 2">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <rect width="100%" height="100%" fill="#EFE8E0"/>
+            <rect x="20" y="20" width="360" height="180" rx="8" fill="#E7DCCC"/>
+          </svg>
+        </button>
+        <button class="gallery-item" data-full="" aria-label="Fotografie 3">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <rect width="100%" height="100%" fill="#EEE7E0"/>
+            <path d="M0 220 Q100 160 200 220 T400 220 L400 300 L0 300 Z" fill="#E1D6CB" opacity="0.6"/>
+          </svg>
+        </button>
+        <button class="gallery-item" data-full="" aria-label="Fotografie 4">
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <rect width="100%" height="100%" fill="#F7F3EF"/>
+            <rect x="24" y="24" width="352" height="210" rx="12" fill="#E7DCCC"/>
+          </svg>
+        </button>
+      </div>
+      <p class="muted">Fotografiile vor fi adăugate mai târziu — înlocuiți spațiile rezervate cu imaginile voastre.</p>
+    </section>
+
+    <section class="container contact" id="contact" tabindex="-1">
+      <h2>Contact / Confirmări</h2>
+      <p>Pentru confirmări sau întrebări practice, vă rugăm să ne contactați astfel:</p>
+      <ul>
+        <li>Telefon: <a href="tel:+40732123456">+40 732 123 456 (Tudor)</a></li>
+        <li>WhatsApp: <a href="https://wa.me/40732123456" target="_blank" rel="noopener">+40 732 123 456 — trimiteți-ne un mesaj</a></li>
+        <li>Email: <a href="mailto:contact@exemplu.ro">contact@exemplu.ro</a></li>
+      </ul>
+      <p class="muted">Vă rugăm să ne anunțați prin telefon sau WhatsApp dacă veți participa, astfel putem organiza mesele și transferurile.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© Edith &amp; Tudor — 2026</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox modal (shows image if data-full provided) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Previzualizare imagine">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Închide">×</button>
+    <img id="lightbox-img" alt="">
+    <p class="lightbox-note muted">Imaginea nu este disponibilă (este un spațiu rezervat).</p>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      if (navMenu.hasAttribute('hidden')) navMenu.removeAttribute('hidden');
+      else navMenu.setAttribute('hidden', '');
+    });
+
+    // Lightbox
+    const gallery = document.getElementById('gallery-grid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lbClose = document.getElementById('lightbox-close');
+
+    gallery.addEventListener('click', (e) => {
+      const btn = e.target.closest('.gallery-item');
+      if (!btn) return;
+      const src = btn.dataset.full;
+      if (!src) {
+        alert('Aceasta este o imagine temporară. Fotografiile reale vor fi adăugate ulterior.');
+        return;
+      }
+      lightboxImg.src = src;
+      lightboxImg.alt = btn.getAttribute('aria-label') || '';
+      lightbox.style.display = 'flex';
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+
+    lbClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lbClose.click();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'flex') lbClose.click();
+    });
+
+    // Smooth scroll adjustment for focus after anchor navigation
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        setTimeout(() => {
+          const target = document.getElementById(id);
+          if (target) target.focus({preventScroll:true});
+        }, 400);
+      });
+    });
+  </script>
 </body>
 </html>
