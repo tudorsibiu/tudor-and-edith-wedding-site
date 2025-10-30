@@ -3,51 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nunta Tudor & Edith - Apuseni Wild, 15 iulie 2026">
-    <title>Tudor & Edith | Nunta Rustică în Apuseni</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Tudor & Edith | Nuntă Rustică Apuseni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #4a4a4a; background: #fff; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; }
+
+        /* HERO */
+        .hero { position: relative; height: 100vh; background: url('https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
+        .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: #fff; z-index: 2; width: 100%; padding: 0 20px; }
+        .hero h1 { font-family: 'Great Vibes', cursive; font-size: 5.5rem; margin-bottom: .5rem; }
+        .hero p { font-size: 1.5rem; margin: .25rem 0; }
+        .hero .date { font-weight: 500; letter-spacing: 2px; }
+
+        /* NAVBAR */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; transition: background .3s; }
+        .navbar.scrolled { background: #fff; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; max-width: 1400px; margin: auto; }
+        .nav-logo { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #b9925e; }
+        .nav-menu { display: flex; list-style: none; }
+        .nav-menu li { margin: 0 1rem; }
+        .nav-menu a { color: #4a4a4a; font-weight: 500; transition: color .3s; }
+        .nav-menu a:hover { color: #b9925e; }
+        .nav-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* SECTION COMMON */
+        section { padding: 100px 0; }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+        .section-title { font-family: 'Great Vibes', cursive; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #b9925e; }
+
+        /* OUR STORY */
+        #our-story { background: #f9f5f0; }
+        .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 3rem; }
+        .story-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform .3s; }
+        .story-card:hover { transform: translateY(-10px); }
+        .story-img { height: 350px; object-fit: cover; }
+        .story-text { padding: 2rem; text-align: center; }
+        .story-text h3 { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #b9925e; margin-bottom: .5rem; }
+
+        /* VENUE */
+        #venue .venue-wrapper { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; }
+        #venue .venue-img { flex: 1; min-width: 300px; border-radius: 12px; }
+        #venue .venue-info { flex: 1; min-width: 300px; }
+        #venue .venue-info ul { list-style: none; margin: 1.5rem 0; }
+        #venue .venue-info li { margin: .75rem 0; font-size: 1.1rem; }
+        #venue .venue-info i { color: #b9925e; margin-right: .5rem; }
+        #venue iframe { width: 100%; height: 350px; border-radius: 12px; margin-top: 1.5rem; }
+
+        /* RSVP */
+        #rsvp { background: #f9f5f0; }
+        .rsvp-form { max-width: 600px; margin: auto; background: #fff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .rsvp-form input, .rsvp-form select, .rsvp-form textarea { width: 100%; padding: 1rem; margin: 1rem 0; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
+        .rsvp-form button { background: #b9925e; color: #fff; border: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; cursor: pointer; width: 100%; transition: background .3s; }
+        .rsvp-form button:hover { background: #a47d4e; }
+        #status { margin-top: 1rem; text-align: center; font-weight: 600; }
+
+        /* GALLERY */
+        #gallery .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+        #gallery img { border-radius: 12px; transition: transform .3s; }
+        #gallery img:hover { transform: scale(1.05); }
+
+        /* FOOTER */
+        footer { background: #333; color: #ccc; text-align: center; padding: 2rem; font-size: .9rem; }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .navbar .container { padding: 1rem; }
+            .nav-menu { position: fixed; top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px); background: #fff; flex-direction: column; align-items: center; justify-content: flex-start; transition: left .3s; }
+            .nav-menu.active { left: 0; }
+            .nav-toggle { display: block; }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 4rem; }
+            .section-title { font-size: 2.8rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section (Cloned: Parallax overlay cu titlu cursive) -->
-    <header id="home">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1 class="hero-title">Tudor & Edith</h1>
-                <p class="hero-date">15 Iulie 2026</p>
-                <p class="hero-subtitle">Apuseni Wild, România</p>
-                <a href="#our-story" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
-            </div>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Tudor & Edith</h1>
+            <p class="date">15 Iulie 2026</p>
+            <p>Apuseni Wild, România</p>
         </div>
     </header>
 
-    <!-- Nav (Sticky, cloned) -->
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <ul>
-            <li><a href="#home">Acasă</a></li>
-            <li><a href="#our-story">Povestea Noastră</a></li>
-            <li><a href="#venue">Locație</a></li>
-            <li><a href="#rsvp">RSVP</a></li>
-            <li><a href="#gallery">Galerie</a></li>
-        </ul>
+        <div class="container">
+            <div class="nav-logo">Tudor & Edith</div>
+            <ul class="nav-menu">
+                <li><a href="#our-story">Povestea noastră</a></li>
+                <li><a href="#venue">Locație</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+            </ul>
+            <div class="nav-toggle"><i class="fas fa-bars"></i></div>
+        </div>
     </nav>
 
-    <!-- Our Story (Cloned: Cards cu poze mici, text centrat) -->
-    <section id="our-story" class="story-section">
+    <!-- OUR STORY -->
+    <section id="our-story">
         <div class="container">
-            <h2>Povestea Noastră</h2>
+            <h2 class="section-title">Povestea noastră</h2>
             <div class="story-grid">
                 <div class="story-card">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tudor în natură Apuseni" class="card-img">
-                    <div class="card-text">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tudor" class="story-img">
+                    <div class="story-text">
                         <h3>Tudor</h3>
                         <p>Inginerul care construiește poduri și vise. Din schele urbane la poteci montane, acum construiesc o viață cu Edith.</p>
                     </div>
                 </div>
                 <div class="story-card">
-                    <img src="https://images.unsplash.com/photo-1434703681659-615dc26bd7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edith în Apuseni wild" class="card-img">
-                    <div class="card-text">
+                    <img src="https://images.unsplash.com/photo-1434703681659-615dc26bd7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edith" class="story-img">
+                    <div class="story-text">
                         <h3>Edith</h3>
                         <p>Doctora care vindecă inimi și spirite. De la sălile de operație la înălțimile Apusenilor, iubirea noastră e leacul perfect.</p>
                     </div>
@@ -56,66 +132,98 @@
         </div>
     </section>
 
-    <!-- Venue (Cloned: Map + listă logistică) -->
-    <section id="venue" class="venue-section">
+    <!-- VENUE -->
+    <section id="venue">
         <div class="container">
-            <h2>Locația: Apuseni Wild</h2>
-            <div class="venue-content">
-                <img src="https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Apuseni Mountains rustic venue" class="venue-img">
-                <div class="venue-details">
+            <h2 class="section-title">Locația</h2>
+            <div class="venue-wrapper">
+                <img src="https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Apuseni Venue" class="venue-img">
+                <div class="venue-info">
                     <p>În inima Munților Apuseni, unde pădurile șoptesc și râurile cântă. Ceremonie sub stejari seculari, recepție la lumina focului.</p>
                     <ul>
                         <li><i class="fas fa-plane"></i> Zbor: Cluj-Napoca (1.5h drive)</li>
                         <li><i class="fas fa-home"></i> Cazare: Glamping eco</li>
                         <li><i class="fas fa-map-marker-alt"></i> Adresă: Parcul Natural Apuseni</li>
                     </ul>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22222.2!2d22.666!3d46.499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47489c1111111111%3A0x1111111111111111!2sApuseni%20Natural%20Park!5e0!3m2!1sro!2sro!4v1720000000000" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22222.2!2d22.666!3d46.499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47489c1111111111%3A0x1111111111111111!2sApuseni%20Natural%20Park!5e0!3m2!1sro!2sro!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RSVP (Cloned: Formă elegantă cu submit JS) -->
-    <section id="rsvp" class="rsvp-section">
+    <!-- RSVP -->
+    <section id="rsvp">
         <div class="container">
-            <h2>Confirmă Prezența</h2>
+            <h2 class="section-title">RSVP</h2>
             <form id="rsvpForm" class="rsvp-form">
                 <input type="text" name="name" placeholder="Nume complet" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <select name="attending" required>
-                    <option value="">Vii?</option>
-                    <option>Da! Abia aștept!</option>
-                    <option>Nu, din păcate</option>
-                </select>
+                <select name="attending" required><option value="">Vii?</option><option>Da! Abia aștept!</option><option>Nu, din păcate</option></select>
                 <input type="number" name="guests" placeholder="Număr invitați" min="1" value="1">
                 <textarea name="message" placeholder="Mesaj / Dietă specială"></textarea>
-                <div class="honeypot"><input type="text" name="honeypot"></div>
-                <button type="submit">Trimite <i class="fas fa-paper-plane"></i></button>
+                <div style="display:none;"><input type="text" name="honeypot"></div>
+                <button type="submit">Trimite RSVP</button>
             </form>
             <p id="status"></p>
         </div>
     </section>
 
-    <!-- Gallery (Cloned: Masonry cu hover) -->
-    <section id="gallery" class="gallery-section">
+    <!-- GALLERY -->
+    <section id="gallery">
         <div class="container">
-            <h2>Galerie Sărbătoare</h2>
+            <h2 class="section-title">Galerie</h2>
             <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rustică Apuseni wedding setup">
-                <img src="https://images.unsplash.com/photo-1565732733280-1383f3a6b508?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cuplu pe potecă montană">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flori sălbatice Apuseni">
-                <img src="https://images.unsplash.com/photo-1519154030589-0f7c3c8c8d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rustic mountain ceremony">
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apuseni sunset love">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wild forest embrace">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1565732733280-1383f3a6b508?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1519154030589-0f7c3c8c8d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="">
             </div>
         </div>
     </section>
 
-    <!-- Footer (Cloned: Simplu) -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Tudor & Edith | Iubire rustică în Apuseni Wild</p>
+        <p>© 2026 Tudor & Edith | Iubire rustică în Apuseni Wild</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // NAVBAR SCROLL
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+        // MOBILE MENU
+        document.querySelector('.nav-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // SMOOTH SCROLL
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                if (document.querySelector('.nav-menu').classList.contains('active')) {
+                    document.querySelector('.nav-menu').classList.remove('active');
+                }
+            });
+        });
+
+        // RSVP SUBMIT
+        const form = document.getElementById('rsvpForm');
+        const status = document.getElementById('status');
+        form.addEventListener('submit', async e => {
+            e.preventDefault();
+            if (form.honeypot.value) return;
+            const data = new FormData(form);
+            const params = new URLSearchParams(data);
+            try {
+                const res = await fetch('YOUR_WEB_APP_URL_HERE', { method: 'POST', body: params });
+                const json = await res.json();
+                status.textContent = json.status === 'success' ? 'RSVP salvat!' : 'Eroare.';
+                if (json.status === 'success') form.reset();
+            } catch { status.textContent = 'Eroare rețea.'; }
+        });
+    </script>
 </body>
 </html>
