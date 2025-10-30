@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP | Tudor & Edith</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Tudor &amp; Edith</h1>
+            <p class="date">July 15, 2026 | Apuseni Wild, Romania</p>
+            <p style="color: #F5F5DC; font-size: 1.2em;">Love as untamed as the Carpathians</p>
+        </div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="venue.html">Venue</a>
+        <a href="rsvp.html">RSVP</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+    <section>
+        <h2>RSVP to the Wild</h2>
+        <p>We'd love to know if you'll join us in the mountains!</p>
+        
+        <form id="rsvpForm" style="max-width:400px; margin:auto; background: rgba(255,255,255,0.9); padding:20px; border-radius:10px;">
+            <label>Name(s): <input type="text" name="name" required></label>
+            <label>Email: <input type="email" name="email" required></label>
+            <label>Attending? 
+                <select name="attending" required>
+                    <option value="">-- Select --</option>
+                    <option>Yes! Can't wait!</option>
+                    <option>Sadly, no</option>
+                </select>
+            </label>
+            <label>Total Guests (incl. you): <input type="number" name="guests" min="1" value="1"></label>
+            <label>Dietary Needs / Message: <textarea name="message" rows="3"></textarea></label>
+            
+            <!-- Anti-spam honeypot -->
+            <div class="honeypot">
+                <label>Leave blank: <input type="text" name="honeypot"></label>
+            </div>
+            
+            <button type="submit">Send RSVP</button>
+        </form>
+        <p id="status"></p>
+
+        <script>
+            const form = document.getElementById('rsvpForm');
+            const status = document.getElementById('status');
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                if (form.honeypot.value) return; // Bot!
+
+                const data = new FormData(form);
+                const params = new URLSearchParams(data);
+
+                try {
+                    const response = await fetch('YOUR_WEB_APP_URL_HERE', {
+                        method: 'POST',
+                        body: params
+                    });
+                    const result = await response.json();
+                    status.textContent = result.status === 'success' 
+                        ? '✅ RSVP saved! See you in the wild! 🌲' 
+                        : '❌ Error — try again or email us.';
+                    if (result.status === 'success') form.reset();
+                } catch (err) {
+                    status.textContent = 'Network error — check connection.';
+                }
+            });
+        </script>
+    </section>
+    <footer>
+        <p>© 2026 Tudor &amp; Edith | Wild hearts, engineered & healed</p>
+    </footer>
+</body>
+</html>
