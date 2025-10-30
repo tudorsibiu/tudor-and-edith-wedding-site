@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nunta Tudor & Edith - Apuseni Wild, 15 iulie 2026">
     <title>Tudor & Edith | Nuntă Rustică Apuseni</title>
     
     <!-- FONTS -->
@@ -21,7 +20,7 @@
         ul { list-style: none; }
 
         /* === HERO SECTION === */
-        .hero { position: relative; height: 100vh; background: url('https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; }
+        .hero { position: relative; height: 100vh; background: url('https://lovedconcepts.shop/wp-content/uploads/2023/08/rustic-hero.jpg') center/cover no-repeat; }
         .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
         .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: #fff; z-index: 2; width: 100%; padding: 0 20px; }
         .hero h1 { font-family: 'Great Vibes', cursive; font-size: 5.5rem; margin-bottom: .5rem; }
@@ -44,6 +43,10 @@
         .container { max-width: 1200px; margin: auto; padding: 0 20px; }
         .section-title { font-family: 'Great Vibes', cursive; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #b9925e; }
 
+        /* === WELCOME / INTRO === */
+        #welcome { text-align: center; }
+        #welcome p { max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; }
+
         /* === OUR STORY === */
         #our-story { background: #f9f5f0; }
         .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 3rem; }
@@ -52,6 +55,13 @@
         .story-img { height: 350px; object-fit: cover; }
         .story-text { padding: 2rem; text-align: center; }
         .story-text h3 { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #b9925e; margin-bottom: .5rem; }
+
+        /* === WHEN & WHERE === */
+        #when-where { background: #f9f5f0; }
+        .ww-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; text-align: center; }
+        .ww-card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .ww-card i { font-size: 2.5rem; color: #b9925e; margin-bottom: 1rem; }
+        .ww-card h4 { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #b9925e; margin-bottom: .5rem; }
 
         /* === VENUE === */
         #venue .venue-wrapper { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; }
@@ -62,18 +72,33 @@
         #venue .venue-info i { color: #b9925e; margin-right: .5rem; }
         #venue iframe { width: 100%; height: 350px; border-radius: 12px; margin-top: 1.5rem; border: 0; }
 
-        /* === RSVP === */
-        #rsvp { background: #f9f5f0; }
-        .rsvp-form { max-width: 600px; margin: auto; background: #fff; padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-        .rsvp-form input, .rsvp-form select, .rsvp-form textarea { width: 100%; padding: 1rem; margin: 1rem 0; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
-        .rsvp-form button { background: #b9925e; color: #fff; border: none; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; cursor: pointer; width: 100%; transition: background .3s; }
-        .rsvp-form button:hover { background: #a47d4e; }
-        #status { margin-top: 1rem; text-align: center; font-weight: 600; }
+        /* === ACCOMMODATION === */
+        #accommodation { background: #f9f5f0; }
+        .acc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+        .acc-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .acc-img { height: 200px; object-fit: cover; }
+        .acc-text { padding: 1.5rem; text-align: center; }
+        .acc-text h4 { font-family: 'Great Vibes', cursive; font-size: 1.6rem; color: #b9925e; margin-bottom: .5rem; }
+
+        /* === REGISTRY === */
+        #registry .registry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2rem; text-align: center; }
+        .registry-item { padding: 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .registry-item i { font-size: 2rem; color: #b9925e; margin-bottom: .5rem; }
+        .registry-item a { color: #4a4a4a; font-weight: 500; }
 
         /* === GALLERY === */
         #gallery .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
         #gallery img { border-radius: 12px; transition: transform .3s; height: 250px; object-fit: cover; }
         #gallery img:hover { transform: scale(1.05); }
+
+        /* === FAQ === */
+        #faq .faq-list { max-width: 800px; margin: auto; }
+        .faq-item { background: #fff; margin-bottom: 1rem; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-question { padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+        .faq-question::after { content: '+'; font-weight: bold; color: #b9925e; }
+        .faq-question.active::after { content: '−'; }
+        .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height .3s, padding .3s; }
+        .faq-answer.active { padding: 1.5rem; max-height: 200px; }
 
         /* === FOOTER === */
         footer { background: #333; color: #ccc; text-align: center; padding: 2rem; font-size: .9rem; }
@@ -112,14 +137,27 @@
         <div class="container">
             <div class="nav-logo">Tudor & Edith</div>
             <ul class="nav-menu">
+                <li><a href="#welcome">Bine ați venit</a></li>
                 <li><a href="#our-story">Povestea noastră</a></li>
-                <li><a href="#venue">Locație</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
+                <li><a href="#when-where">Când & Unde</a></li>
+                <li><a href="#venue">Locația</a></li>
+                <li><a href="#accommodation">Cazare</a></li>
+                <li><a href="#registry">Cadouri</a></li>
                 <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#faq">Întrebări frecvente</a></li>
             </ul>
             <div class="nav-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
+
+    <!-- WELCOME -->
+    <section id="welcome">
+        <div class="container">
+            <h2 class="section-title">Bine ați venit</h2>
+            <p>Dragilor, suntem încântați să vă avem alături în cea mai importantă zi din viața noastră. Vă așteptăm cu drag în inima Munților Apuseni pentru o celebrare rustică și plină de iubire.</p>
+            <p>15 iulie 2026 va fi o zi magică – jurăminte sub stejari seculari, dans sub stele și povești spuse la foc de tabără.</p>
+        </div>
+    </section>
 
     <!-- OUR STORY -->
     <section id="our-story">
@@ -127,18 +165,46 @@
             <h2 class="section-title">Povestea noastră</h2>
             <div class="story-grid">
                 <div class="story-card">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tudor" class="story-img">
+                    <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/bride.jpg" alt="Edith" class="story-img">
+                    <div class="story-text">
+                        <h3>Edith</h3>
+                        <p>Doctora care vindecă inimi și spirite. De la sălile de operație la înălțimile Apusenilor, iubirea noastră e leacul perfect.</p>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/groom.jpg" alt="Tudor" class="story-img">
                     <div class="story-text">
                         <h3>Tudor</h3>
                         <p>Inginerul care construiește poduri și vise. Din schele urbane la poteci montane, acum construiesc o viață cu Edith.</p>
                     </div>
                 </div>
-                <div class="story-card">
-                    <img src="https://images.unsplash.com/photo-1434703681659-615dc26bd7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edith" class="story-img">
-                    <div class="story-text">
-                        <h3>Edith</h3>
-                        <p>Doctora care vindecă inimi și spirite. De la sălile de operație la înălțimile Apusenilor, iubirea noastră e leacul perfect.</p>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHEN & WHERE -->
+    <section id="when-where">
+        <div class="container">
+            <h2 class="section-title">Când & Unde</h2>
+            <div class="ww-grid">
+                <div class="ww-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Data</h4>
+                    <p>15 Iulie 2026</p>
+                    <p>Ceremonia: 17:00</p>
+                    <p>Recepția: 19:00</p>
+                </div>
+                <div class="ww-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Locația</h4>
+                    <p>Apuseni Wild</p>
+                    <p>Parcul Natural Apuseni</p>
+                    <p>România</p>
+                </div>
+                <div class="ww-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Program</h4>
+                    <p>Ceremonie → Cocktail → Cină → Dans</p>
                 </div>
             </div>
         </div>
@@ -149,13 +215,13 @@
         <div class="container">
             <h2 class="section-title">Locația</h2>
             <div class="venue-wrapper">
-                <img src="https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Apuseni Venue" class="venue-img">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/venue.jpg" alt="Apuseni Venue" class="venue-img">
                 <div class="venue-info">
                     <p>În inima Munților Apuseni, unde pădurile șoptesc și râurile cântă. Ceremonie sub stejari seculari, recepție la lumina focului.</p>
                     <ul>
                         <li><i class="fas fa-plane"></i> Zbor: Cluj-Napoca (1.5h drive)</li>
                         <li><i class="fas fa-home"></i> Cazare: Glamping eco</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Adresă: Parcul Natural Apuseni</li>
+                        <li><i class="fas fa-car"></i> Parcare disponibilă</li>
                     </ul>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22222.2!2d22.666!3d46.499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47489c1111111111%3A0x1111111111111111!2sApuseni%20Natural%20Park!5e0!3m2!1sro!2sro!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -163,24 +229,58 @@
         </div>
     </section>
 
-    <!-- RSVP -->
-    <section id="rsvp">
+    <!-- ACCOMMODATION -->
+    <section id="accommodation">
         <div class="container">
-            <h2 class="section-title">RSVP</h2>
-            <form id="rsvpForm" class="rsvp-form">
-                <input type="text" name="name" placeholder="Nume complet" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <select name="attending" required>
-                    <option value="">Vii?</option>
-                    <option>Da! Abia aștept!</option>
-                    <option>Nu, din păcate</option>
-                </select>
-                <input type="number" name="guests" placeholder="Număr invitați" min="1" value="1">
-                <textarea name="message" placeholder="Mesaj / Dietă specială"></textarea>
-                <div style="display:none;"><input type="text" name="honeypot"></div>
-                <button type="submit">Trimite RSVP</button>
-            </form>
-            <p id="status"></p>
+            <h2 class="section-title">Cazare</h2>
+            <div class="acc-grid">
+                <div class="acc-card">
+                    <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/accom1.jpg" alt="Glamping" class="acc-img">
+                    <div class="acc-text">
+                        <h4>Glamping Eco</h4>
+                        <p>Corturi luxoase în natură</p>
+                    </div>
+                </div>
+                <div class="acc-card">
+                    <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/accom2.jpg" alt="Cabana" class="acc-img">
+                    <div class="acc-text">
+                        <h4>Cabane Rustice</h4>
+                        <p>Confort tradițional</p>
+                    </div>
+                </div>
+                <div class="acc-card">
+                    <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/accom3.jpg" alt="Hotel" class="acc-img">
+                    <div class="acc-text">
+                        <h4>Hotel Local</h4>
+                        <p>Opțiune modernă</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRY -->
+    <section id="registry">
+        <div class="container">
+            <h2 class="section-title">Cadouri</h2>
+            <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:2rem;">Prezența voastră este cel mai mare cadou. Dacă doriți să contribuiți, apreciem orice ajutor pentru luna de miere.</p>
+            <div class="registry-grid">
+                <div class="registry-item">
+                    <i class="fas fa-heart"></i>
+                    <p>Luna de miere</p>
+                    <a href="#">Contribuie</a>
+                </div>
+                <div class="registry-item">
+                    <i class="fas fa-gift"></i>
+                    <p>Lista tradițională</p>
+                    <a href="#">Vezi lista</a>
+                </div>
+                <div class="registry-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Plic</p>
+                    <a href="#">Detalii</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -189,12 +289,39 @@
         <div class="container">
             <h2 class="section-title">Galerie</h2>
             <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galerie 1">
-                <img src="https://images.unsplash.com/photo-1565732733280-1383f3a6b508?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galerie 2">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galerie 3">
-                <img src="https://images.unsplash.com/photo-1519154030589-0f7c3c8c8d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galerie 4">
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galerie 5">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Galerie 6">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/gallery1.jpg" alt="Galerie 1">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/gallery2.jpg" alt="Galerie 2">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/gallery3.jpg" alt="Galerie 3">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/gallery4.jpg" alt="Galerie 4">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/gallery5.jpg" alt="Galerie 5">
+                <img src="https://lovedconcepts.shop/wp-content/uploads/2023/08/gallery6.jpg" alt="Galerie 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Întrebări frecvente</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Ce cod vestimentar?<span></span></div>
+                    <div class="faq-answer">
+                        <p>Rustic-chic: rochii lungi, costume lejere, culori pământii. Evitați tocurile – teren natural.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Copiii sunt bineveniți?<span></span></div>
+                    <div class="faq-answer">
+                        <p>Da, dar fără supraveghere dedicată. Vă rugăm să aveți grijă de cei mici.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Meniul include opțiuni vegetariene?<span></span></div>
+                    <div class="faq-answer">
+                        <p>Da, și vegane. Indicați la RSVP.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -206,45 +333,38 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        // NAVBAR SCROLL EFFECT
+        // NAVBAR SCROLL
         const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
-        // MOBILE MENU TOGGLE
+        // MOBILE MENU
         document.querySelector('.nav-toggle').addEventListener('click', () => {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
         // SMOOTH SCROLL
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                 if (document.querySelector('.nav-menu').classList.contains('active')) {
                     document.querySelector('.nav-menu').classList.remove('active');
                 }
             });
         });
 
-        // RSVP FORM SUBMIT TO GOOGLE SHEETS
-        const form = document.getElementById('rsvpForm');
-        const status = document.getElementById('status');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (form.honeypot.value) return; // Anti-bot
-            const data = new FormData(form);
-            const params = new URLSearchParams(data);
-            try {
-                const res = await fetch('YOUR_WEB_APP_URL_HERE', { method: 'POST', body: params });
-                const json = await res.json();
-                status.textContent = json.status === 'success' ? 'RSVP salvat! Mulțumim!' : 'Eroare la trimitere.';
-                if (json.status === 'success') form.reset();
-            } catch (err) {
-                status.textContent = 'Eroare rețea. Încearcă mai târziu.';
-            }
+        // FAQ ACCORDION
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const answer = q.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+                document.querySelectorAll('.faq-question').forEach(qq => qq.classList.remove('active'));
+                if (!isActive) {
+                    answer.classList.add('active');
+                    q.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
