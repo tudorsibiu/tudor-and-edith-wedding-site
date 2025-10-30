@@ -1,0 +1,90 @@
+/* styles.css - Apuseni Wild Wedding Theme */
+body { 
+    margin: 0; 
+    font-family: 'Lato', sans-serif; 
+    background: linear-gradient(to bottom, #228B22, #F5F5DC); 
+    color: #333; 
+}
+header { 
+    text-align: center; 
+    padding: 50px 20px; 
+    background: url('hero.jpg') center/cover no-repeat; 
+    height: 60vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+h1 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 4em; 
+    color: #F5F5DC; 
+    text-shadow: 2px 2px 4px #228B22; 
+    margin: 0; 
+}
+.date { 
+    font-size: 1.5em; 
+    color: #FF8C00; 
+    margin-top: 10px; 
+}
+nav { 
+    background: rgba(34, 139, 34, 0.8); 
+    padding: 10px; 
+    text-align: center; 
+}
+nav a { 
+    color: #F5F5DC; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-weight: bold; 
+}
+nav a:hover { text-decoration: underline; }
+section { 
+    padding: 40px 20px; 
+    max-width: 800px; 
+    margin: auto; 
+    text-align: center; 
+}
+footer { 
+    background: #228B22; 
+    color: #F5F5DC; 
+    padding: 20px; 
+    text-align: center; 
+}
+button { 
+    background: #FF8C00; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    font-size: 1em; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+button:hover { background: #e07b00; }
+form label { 
+    display: block; 
+    margin: 15px 0 5px; 
+    text-align: left; 
+    max-width: 400px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+form input, form select, form textarea { 
+    width: 100%; 
+    max-width: 380px; 
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #228B22; 
+    border-radius: 4px; 
+    font-family: 'Lato', sans-serif; 
+}
+.honeypot { 
+    display: none; 
+}
+#status { 
+    margin-top: 20px; 
+    font-weight: bold; 
+}
+@media (max-width: 768px) { 
+    h1 { font-size: 2.5em; } 
+    header { height: 50vh; }
+}
