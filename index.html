@@ -1,188 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Edith &amp; Tudor — Nuntă</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <meta name="description" content="Edith & Tudor — Nuntă 12 iunie 2026, Apuseni Wilderness. Informații practice, galerie și contact." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nunta Tudor & Edith - Apuseni Wild, 15 iulie 2026">
+    <title>Tudor & Edith | Nunta Rustică în Apuseni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <a class="skip-link" href="#main">Sari la conținut</a>
-
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="#home">Edith &amp; Tudor</a>
-      <nav class="nav" aria-label="Navigație principală">
-        <a href="#story">Povestea noastră</a>
-        <a href="#program">Program</a>
-        <a href="#cazare">Cazare</a>
-        <a href="#gallery">Galerie</a>
-        <a class="rsvp-button" href="#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Meniu</button>
-    </div>
-    <div id="nav-menu" class="mobile-menu" hidden>
-      <a href="#story">Povestea noastră</a>
-      <a href="#program">Program</a>
-      <a href="#cazare">Cazare</a>
-      <a href="#gallery">Galerie</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="home" aria-label="Hero">
-      <img class="hero-img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80" alt="Peisaj rustic Apuseni"/>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content container">
-        <h1>Edith &amp; Tudor</h1>
-        <p class="date">12 iunie 2026 • Apuseni Wilderness</p>
-        <p class="lead">Ne căsătorim — vă invităm să ne fiți alături într-o zi în aer liber, cu muzică, mâncare bună și multă bucurie.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#program">Detalii</a>
-          <a class="btn ghost" href="#contact">Contact</a>
+    <!-- Hero Section (Cloned: Parallax overlay cu titlu cursive) -->
+    <header id="home">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Tudor & Edith</h1>
+                <p class="hero-date">15 Iulie 2026</p>
+                <p class="hero-subtitle">Apuseni Wild, România</p>
+                <a href="#our-story" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+            </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <section class="container story" id="story">
-      <h2>Povestea noastră</h2>
-      <div class="story-grid">
-        <div class="story-text">
-          <p>Edith și Tudor s-au cunoscut într-o zi ploioasă și, de atunci, fiecare aventură i-a apropiat. După ani de călătorii, râsete și prietenii comune, sărbătorim începutul acestei noi călătorii împreună, la Apuseni, în mijlocul naturii.</p>
-          <p>Vă așteptăm cu drag să ne fiți alături pentru ceremonie, cină și dans sub cerul liber.</p>
+    <!-- Nav (Sticky, cloned) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Acasă</a></li>
+            <li><a href="#our-story">Povestea Noastră</a></li>
+            <li><a href="#venue">Locație</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+        </ul>
+    </nav>
+
+    <!-- Our Story (Cloned: Cards cu poze mici, text centrat) -->
+    <section id="our-story" class="story-section">
+        <div class="container">
+            <h2>Povestea Noastră</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tudor în natură Apuseni" class="card-img">
+                    <div class="card-text">
+                        <h3>Tudor</h3>
+                        <p>Inginerul care construiește poduri și vise. Din schele urbane la poteci montane, acum construiesc o viață cu Edith.</p>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1434703681659-615dc26bd7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edith în Apuseni wild" class="card-img">
+                    <div class="card-text">
+                        <h3>Edith</h3>
+                        <p>Doctora care vindecă inimi și spirite. De la sălile de operație la înălțimile Apusenilor, iubirea noastră e leacul perfect.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="story-photo" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60" alt="Placeholder couple"/>
+    </section>
+
+    <!-- Venue (Cloned: Map + listă logistică) -->
+    <section id="venue" class="venue-section">
+        <div class="container">
+            <h2>Locația: Apuseni Wild</h2>
+            <div class="venue-content">
+                <img src="https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Apuseni Mountains rustic venue" class="venue-img">
+                <div class="venue-details">
+                    <p>În inima Munților Apuseni, unde pădurile șoptesc și râurile cântă. Ceremonie sub stejari seculari, recepție la lumina focului.</p>
+                    <ul>
+                        <li><i class="fas fa-plane"></i> Zbor: Cluj-Napoca (1.5h drive)</li>
+                        <li><i class="fas fa-home"></i> Cazare: Glamping eco</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Adresă: Parcul Natural Apuseni</li>
+                    </ul>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22222.2!2d22.666!3d46.499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47489c1111111111%3A0x1111111111111111!2sApuseni%20Natural%20Park!5e0!3m2!1sro!2sro!4v1720000000000" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section class="container program" id="program">
-      <h2>Program</h2>
-      <ul class="timeline">
-        <li>
-          <h3>Ceremonia</h3>
-          <p>12 iunie 2026 — ora 15:00</p>
-          <p>Loc: Apuseni Wild — Poiana principală</p>
-        </li>
-        <li>
-          <h3>Recepție</h3>
-          <p>Imediat după ceremonie — cină și dans</p>
-          <p>Dress code: Smart casual</p>
-        </li>
-      </ul>
+    <!-- RSVP (Cloned: Formă elegantă cu submit JS) -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <h2>Confirmă Prezența</h2>
+            <form id="rsvpForm" class="rsvp-form">
+                <input type="text" name="name" placeholder="Nume complet" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="attending" required>
+                    <option value="">Vii?</option>
+                    <option>Da! Abia aștept!</option>
+                    <option>Nu, din păcate</option>
+                </select>
+                <input type="number" name="guests" placeholder="Număr invitați" min="1" value="1">
+                <textarea name="message" placeholder="Mesaj / Dietă specială"></textarea>
+                <div class="honeypot"><input type="text" name="honeypot"></div>
+                <button type="submit">Trimite <i class="fas fa-paper-plane"></i></button>
+            </form>
+            <p id="status"></p>
+        </div>
     </section>
 
-    <section class="container cazare" id="cazare">
-      <h2>Cazare &amp; transport</h2>
-      <p>Cel mai apropiat oraș: [completați]. Recomandăm pensiuni locale sau camping la fața locului — locuri limitate. Vom oferi transfer din centrul orașului; detalii practice vor fi trimise prin WhatsApp invitaților.</p>
-      <a class="link" href="https://maps.google.com/?q=Apuseni+Wild" target="_blank" rel="noopener">Deschide în Google Maps</a>
+    <!-- Gallery (Cloned: Masonry cu hover) -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Galerie Sărbătoare</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rustică Apuseni wedding setup">
+                <img src="https://images.unsplash.com/photo-1565732733280-1383f3a6b508?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cuplu pe potecă montană">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flori sălbatice Apuseni">
+                <img src="https://images.unsplash.com/photo-1519154030589-0f7c3c8c8d7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rustic mountain ceremony">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apuseni sunset love">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wild forest embrace">
+            </div>
+        </div>
     </section>
 
-    <section class="container gallery" id="gallery" aria-label="Galerie foto">
-      <h2>Galerie</h2>
-      <div class="masonry" id="gallery-grid" aria-live="polite">
-        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 1">
-          <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=60" alt="Rustic detail"/>
-        </button>
-        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1508610048659-a06a3b1c9b3f?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 2">
-          <img src="https://images.unsplash.com/photo-1508610048659-a06a3b1c9b3f?auto=format&fit=crop&w=600&q=60" alt="Wildflowers"/>
-        </button>
-        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 3">
-          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=60" alt="Couple in field"/>
-        </button>
-        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 4">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=60" alt="Warm portrait"/>
-        </button>
-      </div>
-      <p class="muted">Fotografiile sunt temporare — înlocuiți cu imaginile voastre când sunt gata.</p>
-    </section>
+    <!-- Footer (Cloned: Simplu) -->
+    <footer>
+        <p>&copy; 2026 Tudor & Edith | Iubire rustică în Apuseni Wild</p>
+    </footer>
 
-    <section class="container contact" id="contact" tabindex="-1">
-      <h2>Contact / Confirmări</h2>
-      <p>Pentru confirmări sau întrebări practice, vă rugăm să ne contactați astfel:</p>
-      <ul>
-        <li>Telefon: <a href="tel:+40732123456">+40 732 123 456 (Tudor)</a></li>
-        <li>WhatsApp: <a href="https://wa.me/40732123456" target="_blank" rel="noopener">Trimite-ne un mesaj pe WhatsApp</a></li>
-        <li>Email: <a href="mailto:contact@exemplu.ro">contact@exemplu.ro</a></li>
-      </ul>
-      <p class="muted">Vă rugăm să ne anunțați prin telefon sau WhatsApp dacă veți participa, astfel putem organiza mesele și transferurile.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© Edith &amp; Tudor — 2026</p>
-    </div>
-  </footer>
-
-  <!-- Lightbox modal (shows image if data-full provided) -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Previzualizare imagine">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Închide">×</button>
-    <img id="lightbox-img" alt="">
-    <p class="lightbox-note muted">Imaginea nu este disponibilă (este un spațiu rezervat).</p>
-  </div>
-
-  <script>
-    // Mobile nav toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      if (navMenu.hasAttribute('hidden')) navMenu.removeAttribute('hidden');
-      else navMenu.setAttribute('hidden', '');
-    });
-
-    // Lightbox
-    const gallery = document.getElementById('gallery-grid');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lbClose = document.getElementById('lightbox-close');
-
-    gallery.addEventListener('click', (e) => {
-      const btn = e.target.closest('.gallery-item');
-      if (!btn) return;
-      const src = btn.dataset.full;
-      if (!src) {
-        alert('Aceasta este o imagine temporară. Fotografiile reale vor fi adăugate ulterior.');
-        return;
-      }
-      lightboxImg.src = src;
-      lightboxImg.alt = btn.getAttribute('aria-label') || '';
-      lightbox.style.display = 'flex';
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    });
-
-    lbClose.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-      lightbox.setAttribute('aria-hidden', 'true');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
-    });
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) lbClose.click();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.style.display === 'flex') lbClose.click();
-    });
-
-    // Smooth scroll adjustment for focus after anchor navigation
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href').slice(1);
-        if (!id) return;
-        setTimeout(() => {
-          const target = document.getElementById(id);
-          if (target) target.focus({preventScroll:true});
-        }, 400);
-      });
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
