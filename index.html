@@ -20,7 +20,7 @@
         ul { list-style: none; }
 
         /* === HERO SECTION === */
-        .hero { position: relative; height: 100vh; background: url('https://images.unsplash.com/photo-1506905925346-5006b58ff83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; }
+        .hero { position: relative; height: 100vh; background: url('https://source.unsplash.com/1950x1200/?apuseni,wild,mountains,romania') center/cover no-repeat; }
         .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
         .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: #fff; z-index: 2; width: 100%; padding: 0 20px; }
         .hero h1 { font-family: 'Great Vibes', cursive; font-size: 5.5rem; margin-bottom: .5rem; }
@@ -98,7 +98,7 @@
         .faq-question::after { content: '+'; font-weight: bold; color: #b9925e; }
         .faq-question.active::after { content: '−'; }
         .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height .3s, padding .3s; }
-        .faq-answer.active { padding: 1.5rem; max-height: 200px; }
+        .faq-answer.active { padding: 1.5rem; max-height: 300px; }
 
         /* === FOOTER === */
         footer { background: #333; color: #ccc; text-align: center; padding: 2rem; font-size: .9rem; }
@@ -165,14 +165,14 @@
             <h2 class="section-title">Povestea noastră</h2>
             <div class="story-grid">
                 <div class="story-card">
-                    <img src="https://images.unsplash.com/photo-1434703681659-615dc26bd7f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Edith" class="story-img">
+                    <img src="https://source.unsplash.com/800x600/?woman,portrait,romania" alt="Edith" class="story-img">
                     <div class="story-text">
                         <h3>Edith</h3>
                         <p>Doctora care vindecă inimi și spirite. De la sălile de operație la înălțimile Apusenilor, iubirea noastră e leacul perfect.</p>
                     </div>
                 </div>
                 <div class="story-card">
-                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tudor" class="story-img">
+                    <img src="https://source.unsplash.com/800x600/?man,portrait,engineer" alt="Tudor" class="story-img">
                     <div class="story-text">
                         <h3>Tudor</h3>
                         <p>Inginerul care construiește poduri și vise. Din schele urbane la poteci montane, acum construiesc o viață cu Edith.</p>
@@ -215,13 +215,15 @@
         <div class="container">
             <h2 class="section-title">Locația</h2>
             <div class="venue-wrapper">
-                <img src="https://source.unsplash.com/1200x800/?apuseni,wild,mountains,romania" alt="Apuseni Venue - Misty Forest Clearing" class="venue-img">
+                <img src="https://source.unsplash.com/1200x800/?apuseni,wild,glamping,romania" alt="Apuseni Wild - Forest Venue" class="venue-img">
                 <div class="venue-info">
                     <p>În inima Munților Apuseni, unde pădurile șoptesc și râurile cântă. Ceremonie sub stejari seculari, recepție la lumina focului. Vibe: Sălbatic, rustic, magic.</p>
                     <ul>
                         <li><i class="fas fa-plane"></i> Zbor: Cluj-Napoca (1.5h drive)</li>
-                        <li><i class="fas fa-home"></i> Cazare: Glamping eco</li>
-                        <li><i class="fas fa-car"></i> Parcare disponibilă</li>
+                        <li><i class="fas fa-car"></i> Parcare gratuită la locație</li>
+                        <li><i class="fas fa-swimmer"></i> Piscină naturală disponibilă</li>
+                        <li><i class="fas fa-child"></i> Loc de joacă pentru copii</li>
+                        <li><i class="fas fa-concierge-bell"></i> Check-in asistat la recepție</li>
                     </ul>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22222.2!2d22.666!3d46.499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47489c1111111111%3A0x1111111111111111!2sApuseni%20Natural%20Park!5e0!3m2!1sro!2sro!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -233,26 +235,27 @@
     <section id="accommodation">
         <div class="container">
             <h2 class="section-title">Cazare</h2>
+            <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:2rem; font-weight:600;">Toți oaspeții sunt cazați la <strong>Apuseni Wild</strong>. Veți fi preluați la recepție și escortați până la camera/cortul alocat. Check-in începând cu ora 14:00.</p>
             <div class="acc-grid">
                 <div class="acc-card">
-                    <img src="https://source.unsplash.com/400x200/?glamping,apuseni" alt="Glamping" class="acc-img">
+                    <img src="https://source.unsplash.com/400x200/?glamping,tent,apuseni" alt="Glamping" class="acc-img">
                     <div class="acc-text">
-                        <h4>Glamping Eco</h4>
-                        <p>Corturi luxoase în natură</p>
+                        <h4>Glamping Lux</h4>
+                        <p>Corturi cu pat king-size, baie privată</p>
                     </div>
                 </div>
                 <div class="acc-card">
-                    <img src="https://source.unsplash.com/400x200/?cabana,rustic,romania" alt="Cabana" class="acc-img">
+                    <img src="https://source.unsplash.com/400x200/?cabin,wood,romania" alt="Cabana" class="acc-img">
                     <div class="acc-text">
                         <h4>Cabane Rustice</h4>
-                        <p>Confort tradițional</p>
+                        <p>Confort tradițional, sobă cu lemne</p>
                     </div>
                 </div>
                 <div class="acc-card">
-                    <img src="https://source.unsplash.com/400x200/?eco-lodge,apuseni" alt="Hotel" class="acc-img">
+                    <img src="https://source.unsplash.com/400x200/?yurt,glamping" alt="Yurt" class="acc-img">
                     <div class="acc-text">
-                        <h4>Hotel Local</h4>
-                        <p>Opțiune modernă</p>
+                        <h4>Yurt Eco</h4>
+                        <p>Experiență nomadă modernă</p>
                     </div>
                 </div>
             </div>
@@ -289,12 +292,12 @@
         <div class="container">
             <h2 class="section-title">Galerie</h2>
             <div class="gallery-grid">
-                <img src="https://source.unsplash.com/400x300/?apuseni,forest,romania" alt="Forest Trail Ceremony">
-                <img src="https://source.unsplash.com/400x300/?apuseni,wildflowers,mountains" alt="Wildflower Meadow Reception">
-                <img src="https://source.unsplash.com/400x300/?glamping,apuseni,night" alt="Glamping Under Stars">
-                <img src="https://source.unsplash.com/400x300/?apuseni,cave,romania" alt="Hidden Cave Explore">
-                <img src="https://source.unsplash.com/400x300/?river,apuseni,wild" alt="Riverside Toast">
-                <img src="https://source.unsplash.com/400x300/?sunset,apuseni,romania" alt="Sunset Vows">
+                <img src="https://source.unsplash.com/400x300/?apuseni,forest,ceremony" alt="Ceremonie în pădure">
+                <img src="https://source.unsplash.com/400x300/?glamping,firepit,night" alt="Foc de tabără">
+                <img src="https://source.unsplash.com/400x300/?apuseni,pool,natural" alt="Piscină naturală">
+                <img src="https://source.unsplash.com/400x300/?children,playground,romania" alt="Loc de joacă">
+                <img src="https://source.unsplash.com/400x300/?reception,tent,wedding" alt="Recepție în cort">
+                <img src="https://source.unsplash.com/400x300/?sunset,apuseni,vows" alt="Juraminte la apus">
             </div>
         </div>
     </section>
@@ -305,6 +308,18 @@
             <h2 class="section-title">Întrebări frecvente</h2>
             <div class="faq-list">
                 <div class="faq-item">
+                    <div class="faq-question">Cum ajung la cazare?</div>
+                    <div class="faq-answer">
+                        <p>La sosire, mergeți la recepția Apuseni Wild. Veți fi preluați și escortați până la camera/cortul alocat. Check-in de la 14:00.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Ce facilități sunt disponibile?</div>
+                    <div class="faq-answer">
+                        <p>Parcare gratuită, piscină naturală, loc de joacă pentru copii, Wi-Fi în zonele comune, restaurant, bar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
                     <div class="faq-question">Ce cod vestimentar?</div>
                     <div class="faq-answer">
                         <p>Rustic-chic: rochii lungi, costume lejere, culori pământii. Evitați tocurile – teren natural.</p>
@@ -313,13 +328,7 @@
                 <div class="faq-item">
                     <div class="faq-question">Copiii sunt bineveniți?</div>
                     <div class="faq-answer">
-                        <p>Da, dar fără supraveghere dedicată. Vă rugăm să aveți grijă de cei mici.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Meniul include opțiuni vegetariene?</div>
-                    <div class="faq-answer">
-                        <p>Da, și vegane. Indicați la RSVP.</p>
+                        <p>Da! Avem loc de joacă și supraveghere limitată. Vă rugăm să aveți grijă de cei mici.</p>
                     </div>
                 </div>
             </div>
