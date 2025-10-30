@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edith &amp; Tudor — Nuntă</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="description" content="Edith & Tudor — Nuntă 12 iunie 2026, Apuseni Wilderness. Informații practice, galerie și contact." />
+</head>
+<body>
+  <a class="skip-link" href="#main">Sari la conținut</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Edith &amp; Tudor</a>
+      <nav class="nav" aria-label="Navigație principală">
+        <a href="#story">Povestea noastră</a>
+        <a href="#program">Program</a>
+        <a href="#cazare">Cazare</a>
+        <a href="#gallery">Galerie</a>
+        <a class="rsvp-button" href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Meniu</button>
+    </div>
+    <div id="nav-menu" class="mobile-menu" hidden>
+      <a href="#story">Povestea noastră</a>
+      <a href="#program">Program</a>
+      <a href="#cazare">Cazare</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-label="Hero">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80" alt="Peisaj rustic Apuseni"/>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <h1>Edith &amp; Tudor</h1>
+        <p class="date">12 iunie 2026 • Apuseni Wilderness</p>
+        <p class="lead">Ne căsătorim — vă invităm să ne fiți alături într-o zi în aer liber, cu muzică, mâncare bună și multă bucurie.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#program">Detalii</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container story" id="story">
+      <h2>Povestea noastră</h2>
+      <div class="story-grid">
+        <div class="story-text">
+          <p>Edith și Tudor s-au cunoscut într-o zi ploioasă și, de atunci, fiecare aventură i-a apropiat. După ani de călătorii, râsete și prietenii comune, sărbătorim începutul acestei noi călătorii împreună, la Apuseni, în mijlocul naturii.</p>
+          <p>Vă așteptăm cu drag să ne fiți alături pentru ceremonie, cină și dans sub cerul liber.</p>
+        </div>
+        <div class="story-photo" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60" alt="Placeholder couple"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="container program" id="program">
+      <h2>Program</h2>
+      <ul class="timeline">
+        <li>
+          <h3>Ceremonia</h3>
+          <p>12 iunie 2026 — ora 15:00</p>
+          <p>Loc: Apuseni Wild — Poiana principală</p>
+        </li>
+        <li>
+          <h3>Recepție</h3>
+          <p>Imediat după ceremonie — cină și dans</p>
+          <p>Dress code: Smart casual</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container cazare" id="cazare">
+      <h2>Cazare &amp; transport</h2>
+      <p>Cel mai apropiat oraș: [completați]. Recomandăm pensiuni locale sau camping la fața locului — locuri limitate. Vom oferi transfer din centrul orașului; detalii practice vor fi trimise prin WhatsApp invitaților.</p>
+      <a class="link" href="https://maps.google.com/?q=Apuseni+Wild" target="_blank" rel="noopener">Deschide în Google Maps</a>
+    </section>
+
+    <section class="container gallery" id="gallery" aria-label="Galerie foto">
+      <h2>Galerie</h2>
+      <div class="masonry" id="gallery-grid" aria-live="polite">
+        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 1">
+          <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=60" alt="Rustic detail"/>
+        </button>
+        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1508610048659-a06a3b1c9b3f?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 2">
+          <img src="https://images.unsplash.com/photo-1508610048659-a06a3b1c9b3f?auto=format&fit=crop&w=600&q=60" alt="Wildflowers"/>
+        </button>
+        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 3">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=60" alt="Couple in field"/>
+        </button>
+        <button class="gallery-item" data-full="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80" aria-label="Fotografie 4">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=60" alt="Warm portrait"/>
+        </button>
+      </div>
+      <p class="muted">Fotografiile sunt temporare — înlocuiți cu imaginile voastre când sunt gata.</p>
+    </section>
+
+    <section class="container contact" id="contact" tabindex="-1">
+      <h2>Contact / Confirmări</h2>
+      <p>Pentru confirmări sau întrebări practice, vă rugăm să ne contactați astfel:</p>
+      <ul>
+        <li>Telefon: <a href="tel:+40732123456">+40 732 123 456 (Tudor)</a></li>
+        <li>WhatsApp: <a href="https://wa.me/40732123456" target="_blank" rel="noopener">Trimite-ne un mesaj pe WhatsApp</a></li>
+        <li>Email: <a href="mailto:contact@exemplu.ro">contact@exemplu.ro</a></li>
+      </ul>
+      <p class="muted">Vă rugăm să ne anunțați prin telefon sau WhatsApp dacă veți participa, astfel putem organiza mesele și transferurile.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© Edith &amp; Tudor — 2026</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox modal (shows image if data-full provided) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Previzualizare imagine">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Închide">×</button>
+    <img id="lightbox-img" alt="">
+    <p class="lightbox-note muted">Imaginea nu este disponibilă (este un spațiu rezervat).</p>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      if (navMenu.hasAttribute('hidden')) navMenu.removeAttribute('hidden');
+      else navMenu.setAttribute('hidden', '');
+    });
+
+    // Lightbox
+    const gallery = document.getElementById('gallery-grid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lbClose = document.getElementById('lightbox-close');
+
+    gallery.addEventListener('click', (e) => {
+      const btn = e.target.closest('.gallery-item');
+      if (!btn) return;
+      const src = btn.dataset.full;
+      if (!src) {
+        alert('Aceasta este o imagine temporară. Fotografiile reale vor fi adăugate ulterior.');
+        return;
+      }
+      lightboxImg.src = src;
+      lightboxImg.alt = btn.getAttribute('aria-label') || '';
+      lightbox.style.display = 'flex';
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+
+    lbClose.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lbClose.click();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'flex') lbClose.click();
+    });
+
+    // Smooth scroll adjustment for focus after anchor navigation
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        setTimeout(() => {
+          const target = document.getElementById(id);
+          if (target) target.focus({preventScroll:true});
+        }, 400);
+      });
+    });
+  </script>
+</body>
+</html>
