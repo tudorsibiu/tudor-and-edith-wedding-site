@@ -1,380 +1,295 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudor & Edith | Nuntă Rustică Apuseni</title>
-    
-    <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- ICONS -->
+    <title>Edith & Tudor - Nunta în Apuseni!</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* === RESET & BASE === */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #4a4a4a; background: #fff; overflow-x: hidden; }
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; }
-        ul { list-style: none; }
-
-        /* === HERO SECTION === */
-        .hero { position: relative; height: 100vh; background: url('https://source.unsplash.com/1950x1200/?apuseni,wild,mountains,romania') center/cover no-repeat; }
-        .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
-        .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; color: #fff; z-index: 2; width: 100%; padding: 0 20px; }
-        .hero h1 { font-family: 'Great Vibes', cursive; font-size: 5.5rem; margin-bottom: .5rem; }
-        .hero p { font-size: 1.5rem; margin: .25rem 0; }
-        .hero .date { font-weight: 500; letter-spacing: 2px; }
-
-        /* === NAVBAR === */
-        .navbar { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; transition: background .3s; }
-        .navbar.scrolled { background: #fff; }
-        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; max-width: 1400px; margin: auto; }
-        .nav-logo { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #b9925e; }
-        .nav-menu { display: flex; }
-        .nav-menu li { margin: 0 1rem; }
-        .nav-menu a { color: #4a4a4a; font-weight: 500; transition: color .3s; }
-        .nav-menu a:hover { color: #b9925e; }
-        .nav-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: #4a4a4a; }
-
-        /* === SECTION COMMON === */
-        section { padding: 100px 0; }
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
-        .section-title { font-family: 'Great Vibes', cursive; font-size: 3.5rem; text-align: center; margin-bottom: 3rem; color: #b9925e; }
-
-        /* === WELCOME / INTRO === */
-        #welcome { text-align: center; }
-        #welcome p { max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; }
-
-        /* === OUR STORY === */
-        #our-story { background: #f9f5f0; }
-        .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 3rem; }
-        .story-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform .3s; }
-        .story-card:hover { transform: translateY(-10px); }
-        .story-img { height: 350px; object-fit: cover; }
-        .story-text { padding: 2rem; text-align: center; }
-        .story-text h3 { font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #b9925e; margin-bottom: .5rem; }
-
-        /* === WHEN & WHERE === */
-        #when-where { background: #f9f5f0; }
-        .ww-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; text-align: center; }
-        .ww-card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-        .ww-card i { font-size: 2.5rem; color: #b9925e; margin-bottom: 1rem; }
-        .ww-card h4 { font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #b9925e; margin-bottom: .5rem; }
-
-        /* === VENUE === */
-        #venue .venue-wrapper { display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; }
-        #venue .venue-img { flex: 1; min-width: 300px; border-radius: 12px; }
-        #venue .venue-info { flex: 1; min-width: 300px; }
-        #venue .venue-info ul { margin: 1.5rem 0; }
-        #venue .venue-info li { margin: .75rem 0; font-size: 1.1rem; }
-        #venue .venue-info i { color: #b9925e; margin-right: .5rem; }
-        #venue iframe { width: 100%; height: 350px; border-radius: 12px; margin-top: 1.5rem; border: 0; }
-
-        /* === ACCOMMODATION === */
-        #accommodation { background: #f9f5f0; }
-        .acc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
-        .acc-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-        .acc-img { height: 200px; object-fit: cover; }
-        .acc-text { padding: 1.5rem; text-align: center; }
-        .acc-text h4 { font-family: 'Great Vibes', cursive; font-size: 1.6rem; color: #b9925e; margin-bottom: .5rem; }
-
-        /* === REGISTRY === */
-        #registry .registry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2rem; text-align: center; }
-        .registry-item { padding: 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-        .registry-item i { font-size: 2rem; color: #b9925e; margin-bottom: .5rem; }
-        .registry-item a { color: #4a4a4a; font-weight: 500; }
-
-        /* === GALLERY === */
-        #gallery .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
-        #gallery img { border-radius: 12px; transition: transform .3s; height: 250px; object-fit: cover; }
-        #gallery img:hover { transform: scale(1.05); }
-
-        /* === FAQ === */
-        #faq .faq-list { max-width: 800px; margin: auto; }
-        .faq-item { background: #fff; margin-bottom: 1rem; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .faq-question { padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
-        .faq-question::after { content: '+'; font-weight: bold; color: #b9925e; }
-        .faq-question.active::after { content: '−'; }
-        .faq-answer { padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height .3s, padding .3s; }
-        .faq-answer.active { padding: 1.5rem; max-height: 300px; }
-
-        /* === FOOTER === */
-        footer { background: #333; color: #ccc; text-align: center; padding: 2rem; font-size: .9rem; }
-
-        /* === RESPONSIVE === */
-        @media (max-width: 992px) {
-            .navbar .container { padding: 1rem; }
-            .nav-menu { position: fixed; top: 70px; left: -100%; width: 100%; height: calc(100vh - 70px); background: #fff; flex-direction: column; align-items: center; justify-content: flex-start; transition: left .3s; padding-top: 2rem; }
-            .nav-menu.active { left: 0; }
-            .nav-toggle { display: block; }
-            .nav-menu li { margin: 1rem 0; }
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 4rem; }
-            .hero p { font-size: 1.2rem; }
-            .section-title { font-size: 2.8rem; }
-            .story-img { height: 280px; }
-            #venue .venue-wrapper { flex-direction: column; }
-            #gallery img { height: auto; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Tudor & Edith</h1>
-            <p class="date">27 Iunie 2026</p>
-            <p>Apuseni Wild, România</p>
-        </div>
-    </header>
-
     <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-logo">Tudor & Edith</div>
-            <ul class="nav-menu">
-                <li><a href="#welcome">Bine ați venit</a></li>
-                <li><a href="#our-story">Povestea noastră</a></li>
-                <li><a href="#when-where">Când & Unde</a></li>
-                <li><a href="#venue">Locația</a></li>
-                <li><a href="#accommodation">Cazare</a></li>
-                <li><a href="#registry">Cadouri</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#faq">Întrebări frecvente</a></li>
-            </ul>
-            <div class="nav-toggle"><i class="fas fa-bars"></i></div>
+    <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="#story">Povestea</a></li>
+
+            <li><a href="#details">Detalii</a></li>
+
+
+            <li><a href="#rsvp">Confirmare</a></li>
+        </ul>
+        <!-- Mobile Toggle (Handled by script) -->
+        <div class="nav-toggle" style="display: none;">
+            <i class="fas fa-bars" style="color: var(--color-accent); font-size: 1.5rem;"></i>
         </div>
     </nav>
 
-    <!-- WELCOME -->
-    <section id="welcome">
-        <div class="container">
-            <h2 class="section-title">Bine ați venit</h2>
-            <p>Dragilor, suntem încântați să vă avem alături în cea mai importantă zi din viața noastră. Vă așteptăm cu drag în inima Munților Apuseni pentru o celebrare rustică și plină de iubire.</p>
-            <p>27 iunie 2026 va fi o zi magică – jurăminte sub stejari seculari, dans sub stele și povești spuse la foc de tabără.</p>
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <img src="images/venue/DJI_0699.jpg" alt="Apuseni Wild" />
         </div>
-    </section>
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-load">
+            <h1>Edith & Tudor</h1>
+            <h2>Se căsătoresc!</h2>
+            <p class="hero-date">27 . 06 . 2026</p>
+
+
+        </div>
+        <div class="scroll-down">
+            <a href="#story"><i class="fas fa-chevron-down" style="color: white; font-size: 2rem;"></i></a>
+        </div>
+    </header>
 
     <!-- OUR STORY -->
-    <section id="our-story">
+    <section id="story" class="section-bg">
         <div class="container">
-            <h2 class="section-title">Povestea noastră</h2>
-            <div class="story-grid">
-                <div class="story-card">
-                    <img src="https://source.unsplash.com/800x600/?woman,portrait,romania" alt="Edith" class="story-img">
-                    <div class="story-text">
-                        <h3>Edith</h3>
-                        <p>Doctora care vindecă inimi și spirite. De la sălile de operație la înălțimile Apusenilor, iubirea noastră e leacul perfect.</p>
+            <h2 class="section-title anim-target anim-fade-up">Cum s-a ajuns aici</h2>
+            <div class="timeline">
+                <!-- Item 1: Prima Scânteie (Photo Left, Text Right) -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-heartbeat" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content"
+                        style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="timeline-photo" style="flex-shrink: 0;">
+                            <div
+                                style="display: flex; width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-accent); box-shadow: 0 0 25px rgba(201, 168, 108, 0.6);">
+                                <img src="images/surf%20left.jpeg" alt="Surf Left"
+                                    style="width: 50%; height: 100%; object-fit: cover;">
+                                <img src="images/surf_right.jpeg" alt="Surf Right"
+                                    style="width: 50%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="timeline-text" style="flex: 1; min-width: 200px;">
+                            <h3 class="font-display" style="font-size: 1.5rem; margin: 0.5rem 0;">First date</h3>
+                            <p>Wakesurf pe lacul Leman (Geneva).<br>Ne-am văzut, ne-am plăcut, Și așa a început.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="story-card">
-                    <img src="https://source.unsplash.com/800x600/?man,portrait,engineer" alt="Tudor" class="story-img">
-                    <div class="story-text">
-                        <h3>Tudor</h3>
-                        <p>Inginerul care construiește poduri și vise. Din schele urbane la poteci montane, acum construiesc o viață cu Edith.</p>
+
+                <!-- Item 2: Propunerea (Text Left, Photo Right) -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-ring" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content"
+                        style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="timeline-text" style="flex: 1; min-width: 200px;">
+                            <h3 class="font-display" style="font-size: 1.5rem; margin: 0.5rem 0;">A zis DA!</h3>
+                            <p>Semimaraton Rășinari. Ploaie, noroi, crampe musculare; o zi perfectă pentru o cerere în
+                                căsătorie :))<br>Unii treceau linia de finish. Noi treceam linia de start!</p>
+                        </div>
+                        <div class="timeline-photo" style="flex-shrink: 0;">
+                            <div
+                                style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-accent); box-shadow: 0 0 25px rgba(201, 168, 108, 0.6);">
+                                <img src="images/ezgif.com-optimize (1).gif" alt="Propunerea"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Nunta (Text centered, no photo) -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-church" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content"
+                        style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="timeline-photo" style="flex-shrink: 0;">
+                            <div
+                                style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-accent); box-shadow: 0 0 25px rgba(201, 168, 108, 0.6);">
+                                <img src="images/husband.jpeg" alt="Nunta"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="timeline-text" style="flex: 1; min-width: 200px;">
+                            <h3 class="font-display" style="font-size: 1.8rem; margin: 0.5rem 0;">Nunta!</h3>
+                            <p>Ziua în care sarbatorim alături de voi și începem un nou capitol.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHEN & WHERE -->
-    <section id="when-where">
+
+
+    <!-- WEDDING DETAILS -->
+    <section id="details" class="section-bg">
         <div class="container">
-            <h2 class="section-title">Când & Unde</h2>
-            <div class="ww-grid">
-                <div class="ww-card">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h4>Data</h4>
-                    <p>27 Iunie 2026</p>
-                    <p>Ceremonia: 17:00</p>
-                    <p>Recepția: 19:00</p>
+            <h2 class="section-title anim-target anim-fade-up">Despre eveniment</h2>
+
+            <div class="timeline">
+                <!-- Card 1: Unde? -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content" style="padding: 2rem;">
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Unde?</h3>
+                        <p class="font-bold uppercase"
+                            style="color: var(--color-accent); font-size: 0.9rem; margin-bottom: 1rem;">Pensiunea
+                            Apuseni Wild</p>
+                        <p>Petrecerea va avea loc la Apuseni Wild, iar noi vă asigurăm cazarea la Pensiunea Apuseni Wild
+                            și la Pensiunea Alunul (câteva minute de mers pe jos), pe care le-am rezervat deja pentru
+                            noi.</p>
+                        <div class="map-container"
+                            style="width: 100%; height: 250px; margin-top: 1.5rem; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0"
+                                marginwidth="0"
+                                src="https://maps.google.com/maps?q=Apuseni%20Wild&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                        <a href="https://apuseniwild.com/" target="_blank" class="btn"
+                            style="margin-top: 1rem; display: inline-block;">Vezi locația</a>
+                    </div>
                 </div>
-                <div class="ww-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Locația</h4>
-                    <p>Apuseni Wild</p>
-                    <p>Parcul Natural Apuseni</p>
-                    <p>România</p>
+
+                <!-- Card 2: Când? -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clock" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content" style="padding: 2rem;">
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Când?</h3>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 class="font-bold"
+                                style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-accent);">Sâmbătă,
+                                27.06.2026, Ora 14:00
+                            </h4>
+                            <p>Vă vom contacta ulterior cu detalii despre check-in</p>
+                        </div>
+
+
+                    </div>
                 </div>
-                <div class="ww-card">
-                    <i class="fas fa-clock"></i>
-                    <h4>Program</h4>
-                    <p>Ceremonie → Cocktail → Cină → Dans</p>
+
+                <!-- Card 3: Cum? -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-tshirt" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content" style="padding: 2rem;">
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Cum?</h3>
+                        <h4 class="font-bold"
+                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Relaxat. Foarte
+                            Relaxat.</h4>
+                        <p style="margin-bottom: 1rem;">Ne dorim un eveniment mic, fără stres. Suntem înconjurați doar
+                            de familie și prieteni apropiați. Puteți lăsa tocurile și cravata acasă.</p>
+                        <h4 class="font-bold"
+                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Vă așteptăm cu
+                            mic, cu mare, cu costume de baie și cu blănoși.</h4>
+                        <p style="margin-bottom: 1rem;">Avem piscină și loc de joacă pentru copii. Cățeii sunt
+                            bineveniți!</p>
+                    </div>
                 </div>
+
+                <!-- Card 4: Ce mâncăm? -->
+                <div class="timeline-item anim-target anim-fade-up anim-stagger">
+                    <div class="timeline-icon">
+                        <i class="fas fa-utensils" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                    </div>
+                    <div class="timeline-content" style="padding: 2rem;">
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Ce mâncăm?</h3>
+                        <p style="margin-bottom: 1.5rem;">Pregătiți-vă papilele gustative pentru o aventură culinară.
+                        </p>
+
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;">
+                                <strong style="color: var(--color-accent);">Aperitive Reci:</strong> Bunătăți locale și
+                                internaționale.
+                            </li>
+                            <li style="margin-bottom: 1rem;">
+                                <strong style="color: var(--color-accent);">Feluri principale:</strong> Gulaș, Obrăjori
+                                de
+                                porc cu piure cu trufe, Mămăliguță cu sarmale.
+                            </li>
+                            <li>
+                                <strong style="color: var(--color-accent);">Dulce:</strong> Prăjituri și torturi de la
+                                <a href="https://mrcake.ro" target="_blank" style="text-decoration: underline;">Mr.
+                                    Cake</a>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- VENUE -->
-    <section id="venue">
-        <div class="container">
-            <h2 class="section-title">Locația</h2>
-            <div class="venue-wrapper">
-                <img src="https://source.unsplash.com/1200x800/?apuseni,wild,glamping,romania" alt="Apuseni Wild - Forest Venue" class="venue-img">
-                <div class="venue-info">
-                    <p>În inima Munților Apuseni, unde pădurile șoptesc și râurile cântă. Ceremonie sub stejari seculari, recepție la lumina focului. Vibe: Sălbatic, rustic, magic.</p>
-                    <ul>
-                        <li><i class="fas fa-plane"></i> Zbor: Cluj-Napoca (1.5h drive)</li>
-                        <li><i class="fas fa-car"></i> Parcare gratuită la locație</li>
-                        <li><i class="fas fa-swimmer"></i> Piscină naturală disponibilă</li>
-                        <li><i class="fas fa-child"></i> Loc de joacă pentru copii</li>
-                        <li><i class="fas fa-concierge-bell"></i> Check-in asistat la recepție</li>
-                    </ul>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22222.2!2d22.666!3d46.499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47489c1111111111%3A0x1111111111111111!2sApuseni%20Natural%20Park!5e0!3m2!1sro!2sro!4v1720000000000" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- MENU -->
 
-    <!-- ACCOMMODATION -->
-    <section id="accommodation">
-        <div class="container">
-            <h2 class="section-title">Cazare</h2>
-            <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:2rem; font-weight:600;">Toți oaspeții sunt cazați la <strong>Apuseni Wild</strong>. Veți fi preluați la recepție și escortați până la camera/cortul alocat. Check-in începând cu ora 14:00.</p>
-            <div class="acc-grid">
-                <div class="acc-card">
-                    <img src="https://source.unsplash.com/400x200/?glamping,tent,apuseni" alt="Glamping" class="acc-img">
-                    <div class="acc-text">
-                        <h4>Glamping Lux</h4>
-                        <p>Corturi cu pat king-size, baie privată</p>
-                    </div>
-                </div>
-                <div class="acc-card">
-                    <img src="https://source.unsplash.com/400x200/?cabin,wood,romania" alt="Cabana" class="acc-img">
-                    <div class="acc-text">
-                        <h4>Cabane Rustice</h4>
-                        <p>Confort tradițional, sobă cu lemne</p>
-                    </div>
-                </div>
-                <div class="acc-card">
-                    <img src="https://source.unsplash.com/400x200/?yurt,glamping" alt="Yurt" class="acc-img">
-                    <div class="acc-text">
-                        <h4>Yurt Eco</h4>
-                        <p>Experiență nomadă modernă</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REGISTRY -->
-    <section id="registry">
-        <div class="container">
-            <h2 class="section-title">Cadouri</h2>
-            <p style="text-align:center; max-width:800px; margin:auto; margin-bottom:2rem;">Prezența voastră este cel mai mare cadou. Dacă doriți să contribuiți, apreciem orice ajutor pentru luna de miere.</p>
-            <div class="registry-grid">
-                <div class="registry-item">
-                    <i class="fas fa-heart"></i>
-                    <p>Luna de miere</p>
-                    <a href="#">Contribuie</a>
-                </div>
-                <div class="registry-item">
-                    <i class="fas fa-gift"></i>
-                    <p>Lista tradițională</p>
-                    <a href="#">Vezi lista</a>
-                </div>
-                <div class="registry-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>Plic</p>
-                    <a href="#">Detalii</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- GALLERY -->
-    <section id="gallery">
+
+
+    <!-- BEST MAN -->
+    <section id="bestman" class="section-bg">
         <div class="container">
-            <h2 class="section-title">Galerie</h2>
-            <div class="gallery-grid">
-                <img src="https://source.unsplash.com/400x300/?apuseni,forest,ceremony" alt="Ceremonie în pădure">
-                <img src="https://source.unsplash.com/400x300/?glamping,firepit,night" alt="Foc de tabără">
-                <img src="https://source.unsplash.com/400x300/?apuseni,pool,natural" alt="Piscină naturală">
-                <img src="https://source.unsplash.com/400x300/?children,playground,romania" alt="Loc de joacă">
-                <img src="https://source.unsplash.com/400x300/?reception,tent,wedding" alt="Recepție în cort">
-                <img src="https://source.unsplash.com/400x300/?sunset,apuseni,vows" alt="Juraminte la apus">
+            <h2 class="section-title anim-target anim-fade-up">Cavalerul de Onoare</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <!-- INFO -->
+                <div class="flex-1 text-center md:text-right anim-target anim-left">
+                    <h3 class="font-display" style="font-size: 2rem; margin-bottom: 1rem;">Obi</h3>
+                    <p class="font-bold" style="color: var(--color-accent); margin-bottom: 1rem;">Campion la lins
+                        parchetul degeaba și un mâncău desăvârșit. În ziua cea mare, va fi responsabil de paza
+                        verighetelor (sperăm să nu le mănânce).</p>
+                </div>
+                <!-- IMAGE -->
+                <div class="flex-1 anim-target anim-right">
+                    <div class="flex justify-center">
+                        <img src="images/obi_2.jpg" alt="Obi Best Man"
+                            style="width: 80%; border-radius: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); object-fit: cover;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-        <div class="container">
-            <h2 class="section-title">Întrebări frecvente</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Cum ajung la cazare?</div>
-                    <div class="faq-answer">
-                        <p>La sosire, mergeți la recepția Apuseni Wild. Veți fi preluați și escortați până la camera/cortul alocat. Check-in de la 14:00.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Ce facilități sunt disponibile?</div>
-                    <div class="faq-answer">
-                        <p>Parcare gratuită, piscină naturală, loc de joacă pentru copii, Wi-Fi în zonele comune, restaurant, bar.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Ce cod vestimentar?</div>
-                    <div class="faq-answer">
-                        <p>Rustic-chic: rochii lungi, costume lejere, culori pământii. Evitați tocurile – teren natural.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Copiii sunt bineveniți?</div>
-                    <div class="faq-answer">
-                        <p>Da! Avem loc de joacă și supraveghere limitată. Vă rugăm să aveți grijă de cei mici.</p>
-                    </div>
-                </div>
+    <!-- RSVP -->
+    <section id="rsvp">
+        <div class="container text-center max-w-2xl mx-auto">
+            <h2 class="section-title anim-target anim-fade-up">No' veniți.. sau?</h2>
+            <div class="card anim-target anim-fade-up">
+                <p class="font-bold" style="color: var(--color-accent-dark);">
+                    Vă rugăm să ne scrieți pe Whatsapp/Whatever dacă veniți, dacă rămâneți peste noapte și dacă aveți un
+                    regim alimentar special.
+                </p>
+                <p style="margin-top: 1rem; font-style: italic;">
+                    Termen limită de răspuns: 31 martie 2026
+                </p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 Tudor & Edith | Iubire rustică în Apuseni Wild</p>
+        <div class="container text-center">
+            <div
+                style="font-family: var(--font-display); font-size: 3rem; color: var(--color-white); margin-bottom: 1rem;">
+                Edith <span class="anim-heartbeat" style="color: var(--color-accent);">❤</span> Tudor
+            </div>
+            <p class="font-body" style="font-size: 0.9rem;">
+                2026 | Construit cu drag (și un pic de cod) pentru ziua noastră specială.
+            </p>
+        </div>
     </footer>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        // NAVBAR SCROLL
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+    <!-- LIGHTBOX OVERLAY -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full screen gallery">
+    </div>
 
-        // MOBILE MENU
-        document.querySelector('.nav-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-
-        // SMOOTH SCROLL
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                if (document.querySelector('.nav-menu').classList.contains('active')) {
-                    document.querySelector('.nav-menu').classList.remove('active');
-                }
-            });
-        });
-
-        // FAQ ACCORDION
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                const answer = q.nextElementSibling;
-                const isActive = answer.classList.contains('active');
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
-                document.querySelectorAll('.faq-question').forEach(qq => qq.classList.remove('active'));
-                if (!isActive) {
-                    answer.classList.add('active');
-                    q.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
