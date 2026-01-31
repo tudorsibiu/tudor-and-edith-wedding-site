@@ -836,15 +836,15 @@ footer {
 }
 
 @media (min-width: 769px) {
-    .md\:flex-row {
+    .md-flex-row {
         flex-direction: row;
     }
 
-    .md\:text-right {
+    .md-text-right {
         text-align: right;
     }
 
-    .md\:gap-16 {
+    .md-gap-16 {
         gap: 4rem;
     }
 }
