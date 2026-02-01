@@ -917,7 +917,9 @@ footer {
 
     .timeline-content {
         padding: 1rem;
-        width: 100%;
+        width: calc(100vw - 6rem) !important;
+        /* viewport width minus icon + padding */
+        max-width: 100%;
         box-sizing: border-box;
         overflow: hidden;
     }
@@ -929,22 +931,30 @@ footer {
 
     /* Force circular images to fit on mobile */
     .timeline-content .timeline-photo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        flex-shrink: 1 !important;
     }
 
-    .timeline-content .timeline-photo>div {
-        width: 150px !important;
-        height: 150px !important;
-        max-width: 150px !important;
-        max-height: 150px !important;
+    .timeline-photo-circle {
+        width: 140px !important;
+        height: 140px !important;
+        max-width: 140px !important;
+        max-height: 140px !important;
     }
 
     /* Stack content vertically on mobile */
     .timeline-content[style*="display: flex"] {
         flex-direction: column !important;
         align-items: center !important;
+        gap: 1rem !important;
+    }
+
+    .timeline-text {
+        min-width: 0 !important;
+        width: 100% !important;
+        text-align: center;
     }
 
     .countdown {
