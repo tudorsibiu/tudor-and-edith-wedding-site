@@ -41,6 +41,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center bottom;
+    background-repeat: no-repeat;
     color: var(--color-text);
     line-height: 1.7;
     overflow-x: hidden;
@@ -883,6 +884,12 @@ footer {
     .hero h2 {
         font-size: 1rem;
         letter-spacing: 0.3rem;
+    }
+
+    .hero-date {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        white-space: nowrap;
     }
 
     .section-title {
