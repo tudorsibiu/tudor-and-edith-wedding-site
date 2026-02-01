@@ -12,15 +12,45 @@
 
 <body>
 
+    <div class="language-switcher">
+        <button id="lang-ro" class="active" onclick="setLanguage('ro')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="20" height="20">
+                <path fill="#002B7F" d="M0 0h1v2H0z" />
+                <path fill="#FCD116" d="M1 0h1v2H1z" />
+                <path fill="#CE1126" d="M2 0h1v2H2z" />
+            </svg>
+            RO
+        </button>
+        <div class="divider"></div>
+        <button id="lang-en" onclick="setLanguage('en')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="20" height="20">
+                <clipPath id="s">
+                    <path d="M0,0 v30 h60 v-30 z" />
+                </clipPath>
+                <clipPath id="t">
+                    <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+                </clipPath>
+                <g clip-path="url(#s)">
+                    <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" />
+                    <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4" />
+                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10" />
+                    <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
+                </g>
+            </svg>
+            EN
+        </button>
+    </div>
+
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <ul class="nav-links">
-            <li><a href="#story">Povestea</a></li>
+            <li><a href="#story" data-i18n="nav_story">Povestea</a></li>
 
-            <li><a href="#details">Detalii</a></li>
+            <li><a href="#details" data-i18n="nav_details">Detalii</a></li>
 
 
-            <li><a href="#rsvp">Confirmare</a></li>
+            <li><a href="#rsvp" data-i18n="nav_rsvp">Confirmare</a></li>
         </ul>
         <!-- Mobile Toggle (Handled by script) -->
         <div class="nav-toggle" style="display: none;">
@@ -36,7 +66,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content animate-load">
             <h1>Edith & Tudor</h1>
-            <h2>Se căsătoresc!</h2>
+            <h2><span data-i18n="hero_subtitle">Se căsătoresc!</span></h2>
             <p class="hero-date">27 . 06 . 2026</p>
 
 
@@ -49,7 +79,7 @@
     <!-- OUR STORY -->
     <section id="story" class="section-bg">
         <div class="container">
-            <h2 class="section-title anim-target anim-fade-up">Cum s-a ajuns aici</h2>
+            <h2 class="section-title anim-target anim-fade-up" data-i18n="story_title">Cum s-a ajuns aici</h2>
             <div class="timeline">
                 <!-- Item 1: Prima Scânteie (Photo Left, Text Right) -->
                 <div class="timeline-item anim-target anim-fade-up anim-stagger">
@@ -68,8 +98,10 @@
                             </div>
                         </div>
                         <div class="timeline-text" style="flex: 1; min-width: 200px;">
-                            <h3 class="font-display" style="font-size: 1.5rem; margin: 0.5rem 0;">First date</h3>
-                            <p>Wakesurf pe lacul Leman (Geneva).<br>Ne-am văzut, ne-am plăcut, Și așa a început.</p>
+                            <h3 class="font-display" style="font-size: 1.5rem; margin: 0.5rem 0;"
+                                data-i18n="story_1_title">First date</h3>
+                            <p data-i18n="story_1_text">Wakesurf pe lacul Leman (Geneva).<br>Ne-am văzut, ne-am plăcut,
+                                Și așa a început.</p>
                         </div>
                     </div>
                 </div>
@@ -83,8 +115,10 @@
                     <div class="timeline-content"
                         style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
                         <div class="timeline-text" style="flex: 1; min-width: 200px;">
-                            <h3 class="font-display" style="font-size: 1.5rem; margin: 0.5rem 0;">A zis DA!</h3>
-                            <p>Semimaraton Rășinari. Ploaie, noroi, crampe musculare; o zi perfectă pentru o cerere în
+                            <h3 class="font-display" style="font-size: 1.5rem; margin: 0.5rem 0;"
+                                data-i18n="story_2_title">A zis DA!</h3>
+                            <p data-i18n="story_2_text">Semimaraton Rășinari. Ploaie, noroi, crampe musculare; o zi
+                                perfectă pentru o cerere în
                                 căsătorie :))<br>Unii treceau linia de finish. Noi treceam linia de start!</p>
                         </div>
                         <div class="timeline-photo" style="flex-shrink: 0;">
@@ -112,8 +146,10 @@
                             </div>
                         </div>
                         <div class="timeline-text" style="flex: 1; min-width: 200px;">
-                            <h3 class="font-display" style="font-size: 1.8rem; margin: 0.5rem 0;">Nunta!</h3>
-                            <p>Ziua în care sarbatorim alături de voi și începem un nou capitol.</p>
+                            <h3 class="font-display" style="font-size: 1.8rem; margin: 0.5rem 0;"
+                                data-i18n="story_3_title">Nunta!</h3>
+                            <p data-i18n="story_3_text">Ziua în care sarbatorim alături de voi și începem un nou
+                                capitol.</p>
                         </div>
                     </div>
                 </div>
@@ -126,7 +162,7 @@
     <!-- WEDDING DETAILS -->
     <section id="details" class="section-bg-alt">
         <div class="container">
-            <h2 class="section-title anim-target anim-fade-up">Despre eveniment</h2>
+            <h2 class="section-title anim-target anim-fade-up" data-i18n="details_title">Despre eveniment</h2>
 
             <div class="timeline">
                 <!-- Card 1: Unde? -->
@@ -135,12 +171,14 @@
                         <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--color-accent);"></i>
                     </div>
                     <div class="timeline-content" style="padding: 2rem;">
-                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Unde?</h3>
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 0.5rem;"
+                            data-i18n="details_where_title">Unde?</h3>
                         <p class="font-bold uppercase"
-                            style="color: var(--color-accent); font-size: 0.9rem; margin-bottom: 1rem;">Pensiunea
+                            style="color: var(--color-accent); font-size: 0.9rem; margin-bottom: 1rem;"
+                            data-i18n="details_venue_name">Pensiunea
                             Apuseni Wild</p>
-                        <p>Petrecerea va avea loc la Apuseni Wild, iar noi vă asigurăm cazarea la <a
-                                href="https://apuseniwild.com/" target="_blank"
+                        <p data-i18n="details_venue_text">Petrecerea va avea loc la Apuseni Wild, iar noi vă asigurăm
+                            cazarea la <a href="https://apuseniwild.com/" target="_blank"
                                 style="color: var(--color-accent); text-decoration: underline;">Pensiunea Apuseni
                                 Wild</a>
                             și la <a href="https://alunul.ro/" target="_blank"
@@ -155,7 +193,8 @@
                                 src="https://maps.google.com/maps?q=Apuseni%20Wild&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
                         </div>
                         <a href="https://apuseniwild.com/" target="_blank" class="btn"
-                            style="margin-top: 1rem; display: inline-block;">Vezi locația</a>
+                            style="margin-top: 1rem; display: inline-block;" data-i18n="details_view_location">Vezi
+                            locația</a>
                     </div>
                 </div>
 
@@ -165,14 +204,16 @@
                         <i class="fas fa-clock" style="font-size: 1.5rem; color: var(--color-accent);"></i>
                     </div>
                     <div class="timeline-content" style="padding: 2rem;">
-                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Când?</h3>
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;"
+                            data-i18n="details_when_title">Când?</h3>
 
                         <div style="margin-bottom: 1.5rem;">
                             <h4 class="font-bold"
-                                style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-accent);">Sâmbătă,
+                                style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-accent);"
+                                data-i18n="details_when_date">Sâmbătă,
                                 27.06.2026, Ora 14:00
                             </h4>
-                            <p>Vă vom contacta ulterior cu detalii despre check-in</p>
+                            <p data-i18n="details_when_info">Vă vom contacta ulterior cu detalii despre check-in</p>
                         </div>
 
 
@@ -185,15 +226,20 @@
                         <i class="fas fa-tshirt" style="font-size: 1.5rem; color: var(--color-accent);"></i>
                     </div>
                     <div class="timeline-content" style="padding: 2rem;">
-                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Cum?</h3>
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;"
+                            data-i18n="details_how_title">Cum?</h3>
                         <h4 class="font-bold"
-                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Relaxat.</h4>
-                        <p style="margin-bottom: 1rem;">Ne dorim un eveniment mic, fără stres. Suntem înconjurați doar
+                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);"
+                            data-i18n="details_how_relaxed">Relaxat.</h4>
+                        <p style="margin-bottom: 1rem;" data-i18n="details_how_text1">Ne dorim un eveniment mic, fără
+                            stres. Suntem înconjurați doar
                             de familie și prieteni apropiați. Puteți lăsa tocurile și cravata acasă.</p>
                         <h4 class="font-bold"
-                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Vă așteptăm cu
+                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);"
+                            data-i18n="details_how_pets">Vă așteptăm cu
                             mic, cu mare, cu costume de baie și cu blănoși.</h4>
-                        <p style="margin-bottom: 1rem;">Avem piscină și loc de joacă pentru copii. Cățeii sunt
+                        <p style="margin-bottom: 1rem;" data-i18n="details_how_text2">Avem piscină și loc de joacă
+                            pentru copii. Cățeii sunt
                             bineveniți!</p>
                     </div>
                 </div>
@@ -204,22 +250,29 @@
                         <i class="fas fa-utensils" style="font-size: 1.5rem; color: var(--color-accent);"></i>
                     </div>
                     <div class="timeline-content" style="padding: 2rem;">
-                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Ce mâncăm?</h3>
-                        <p style="margin-bottom: 1.5rem;">Pregătiți-vă papilele gustative pentru o aventură culinară.
+                        <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;"
+                            data-i18n="details_food_title">Ce mâncăm?</h3>
+                        <p style="margin-bottom: 1.5rem;" data-i18n="details_food_intro">Pregătiți-vă papilele gustative
+                            pentru o aventură culinară.
                         </p>
 
                         <ul style="list-style: none; padding: 0;">
                             <li style="margin-bottom: 1rem;">
-                                <strong style="color: var(--color-accent);">Aperitive Reci:</strong> Bunătăți locale și
-                                internaționale.
+                                <strong style="color: var(--color-accent);"
+                                    data-i18n="details_food_cold_label">Aperitive Reci:</strong> <span
+                                    data-i18n="details_food_cold_text">Bunătăți locale și
+                                    internaționale.</span>
                             </li>
                             <li style="margin-bottom: 1rem;">
-                                <strong style="color: var(--color-accent);">Feluri principale:</strong> Gulaș, Obrăjori
-                                de
-                                porc cu piure cu trufe, Mămăliguță cu sarmale.
+                                <strong style="color: var(--color-accent);" data-i18n="details_food_main_label">Feluri
+                                    principale:</strong> <span data-i18n="details_food_main_text">Gulaș, Obrăjori
+                                    de
+                                    porc cu piure cu trufe, Mămăliguță cu sarmale.</span>
                             </li>
                             <li>
-                                <strong style="color: var(--color-accent);">Dulce:</strong> Prăjituri și torturi de la
+                                <strong style="color: var(--color-accent);"
+                                    data-i18n="details_food_sweet_label">Dulce:</strong> <span
+                                    data-i18n="details_food_sweet_text">Prăjituri și torturi de la</span>
                                 <a href="https://mrcake.ro" target="_blank" style="text-decoration: underline;">Mr.
                                     Cake</a>.
                             </li>
@@ -240,12 +293,13 @@
     <!-- BEST MAN -->
     <section id="bestman" class="section-bg">
         <div class="container">
-            <h2 class="section-title anim-target anim-fade-up">Cavalerul de Onoare</h2>
+            <h2 class="section-title anim-target anim-fade-up" data-i18n="bestman_title">Cavalerul de Onoare</h2>
             <div class="flex flex-col items-center gap-8">
                 <!-- INFO -->
                 <div class="flex-1 text-center anim-target anim-left">
                     <h3 class="font-display" style="font-size: 2rem; margin-bottom: 1rem;">Obi</h3>
-                    <p class="font-bold" style="color: var(--color-accent); margin-bottom: 1rem;">Campion la lins
+                    <p class="font-bold" style="color: var(--color-accent); margin-bottom: 1rem;"
+                        data-i18n="bestman_text">Campion la lins
                         parchetul degeaba și un mâncău desăvârșit. În ziua cea mare, va fi responsabil de paza
                         verighetelor (sperăm să nu le mănânce).</p>
                 </div>
@@ -263,13 +317,13 @@
     <!-- RSVP -->
     <section id="rsvp" class="section-bg-alt">
         <div class="container text-center max-w-2xl mx-auto">
-            <h2 class="section-title anim-target anim-fade-up">No' veniți.. sau?</h2>
+            <h2 class="section-title anim-target anim-fade-up" data-i18n="rsvp_title">No' veniți.. sau?</h2>
             <div class="card anim-target anim-fade-up">
-                <p class="font-bold" style="color: var(--color-accent-dark);">
+                <p class="font-bold" style="color: var(--color-accent-dark);" data-i18n="rsvp_text">
                     Vă rugăm să ne scrieți pe Whatsapp/Whatever dacă veniți, dacă rămâneți peste noapte și dacă aveți un
                     regim alimentar special.
                 </p>
-                <p style="margin-top: 1rem; font-style: italic;">
+                <p style="margin-top: 1rem; font-style: italic;" data-i18n="rsvp_deadline">
                     Termen limită de răspuns: 31 martie 2026
                 </p>
             </div>
@@ -284,7 +338,7 @@
                 Edith <span class="anim-heartbeat" style="color: var(--color-accent);">❤</span> Tudor
             </div>
 
-            <p class="font-body" style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">
+            <p class="font-body" style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;" data-i18n="footer_text">
                 Construit cu Google Antigravity
             </p>
         </div>

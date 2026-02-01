@@ -1029,3 +1029,68 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: #B8944F;
 }
+
+/* LANGUAGE SWITCHER */
+.language-switcher {
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(13, 13, 13, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.language-switcher button:hover {
+    opacity: 1;
+    color: var(--color-white);
+}
+
+.language-switcher button.active {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+.language-switcher button img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.language-switcher .divider {
+    width: 1px;
+    height: 15px;
+    background-color: var(--color-border);
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
