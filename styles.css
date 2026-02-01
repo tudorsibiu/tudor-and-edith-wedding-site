@@ -915,6 +915,38 @@ footer {
         /* center of the 4rem icon */
     }
 
+    .timeline-content {
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .timeline-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Force circular images to fit on mobile */
+    .timeline-content .timeline-photo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .timeline-content .timeline-photo>div {
+        width: 150px !important;
+        height: 150px !important;
+        max-width: 150px !important;
+        max-height: 150px !important;
+    }
+
+    /* Stack content vertically on mobile */
+    .timeline-content[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
     .countdown {
         gap: 1.5rem;
     }
