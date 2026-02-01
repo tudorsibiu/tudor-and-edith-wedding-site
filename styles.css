@@ -911,13 +911,16 @@ footer {
         width: 3rem !important;
         /* reduced from 4rem */
         height: 3rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .timeline-icon i,
     .timeline-icon svg {
         font-size: 1.2rem !important;
-        width: 1.4rem !important;
-        height: 1.4rem !important;
+        width: auto !important;
+        height: auto !important;
     }
 
     .timeline::before {
