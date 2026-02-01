@@ -77,7 +77,15 @@
                 <!-- Item 2: Propunerea (Text Left, Photo Right) -->
                 <div class="timeline-item anim-target anim-fade-up anim-stagger">
                     <div class="timeline-icon">
-                        <i class="fas fa-ring" style="font-size: 1.5rem; color: var(--color-accent);"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            style="width: 1.8rem; height: 1.8rem; fill: none; stroke: var(--color-accent); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;">
+                            <!-- Diamond -->
+                            <polygon points="12,2 8,6 12,10 16,6" />
+                            <!-- Band -->
+                            <ellipse cx="12" cy="16" rx="7" ry="6" />
+                            <!-- Connection -->
+                            <line x1="12" y1="10" x2="12" y2="11" />
+                        </svg>
                     </div>
                     <div class="timeline-content"
                         style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
@@ -123,7 +131,7 @@
 
 
     <!-- WEDDING DETAILS -->
-    <section id="details" class="section-bg">
+    <section id="details" class="section-bg-alt">
         <div class="container">
             <h2 class="section-title anim-target anim-fade-up">Despre eveniment</h2>
 
@@ -138,8 +146,14 @@
                         <p class="font-bold uppercase"
                             style="color: var(--color-accent); font-size: 0.9rem; margin-bottom: 1rem;">Pensiunea
                             Apuseni Wild</p>
-                        <p>Petrecerea va avea loc la Apuseni Wild, iar noi vă asigurăm cazarea la Pensiunea Apuseni Wild
-                            și la Pensiunea Alunul (câteva minute de mers pe jos), pe care le-am rezervat deja pentru
+                        <p>Petrecerea va avea loc la Apuseni Wild, iar noi vă asigurăm cazarea la <a
+                                href="https://apuseniwild.com/" target="_blank"
+                                style="color: var(--color-accent); text-decoration: underline;">Pensiunea Apuseni
+                                Wild</a>
+                            și la <a href="https://alunul.ro/" target="_blank"
+                                style="color: var(--color-accent); text-decoration: underline;">Pensiunea Alunul</a>
+                            (câteva minute de mers pe jos),
+                            pe care le-am rezervat deja pentru
                             noi.</p>
                         <div class="map-container"
                             style="width: 100%; height: 250px; margin-top: 1.5rem; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
@@ -180,8 +194,7 @@
                     <div class="timeline-content" style="padding: 2rem;">
                         <h3 class="font-display" style="font-size: 1.8rem; margin-bottom: 1rem;">Cum?</h3>
                         <h4 class="font-bold"
-                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Relaxat. Foarte
-                            Relaxat.</h4>
+                            style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--color-accent);">Relaxat.</h4>
                         <p style="margin-bottom: 1rem;">Ne dorim un eveniment mic, fără stres. Suntem înconjurați doar
                             de familie și prieteni apropiați. Puteți lăsa tocurile și cravata acasă.</p>
                         <h4 class="font-bold"
@@ -255,7 +268,7 @@
     </section>
 
     <!-- RSVP -->
-    <section id="rsvp">
+    <section id="rsvp" class="section-bg-alt">
         <div class="container text-center max-w-2xl mx-auto">
             <h2 class="section-title anim-target anim-fade-up">No' veniți.. sau?</h2>
             <div class="card anim-target anim-fade-up">
@@ -277,8 +290,9 @@
                 style="font-family: var(--font-display); font-size: 3rem; color: var(--color-white); margin-bottom: 1rem;">
                 Edith <span class="anim-heartbeat" style="color: var(--color-accent);">❤</span> Tudor
             </div>
-            <p class="font-body" style="font-size: 0.9rem;">
-                2026 | Construit cu drag (și un pic de cod) pentru ziua noastră specială.
+
+            <p class="font-body" style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">
+                Construit cu Google Antigravity
             </p>
         </div>
     </footer>
