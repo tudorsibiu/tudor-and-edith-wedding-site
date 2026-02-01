@@ -898,8 +898,8 @@ footer {
 
     /* Mobile timeline alignment fix */
     .timeline-item {
-        padding-left: 4.5rem;
-        /* space for icon (4rem) + small gap */
+        padding-left: 3.5rem;
+        /* reduced from 4.5rem */
         position: relative;
         gap: 0;
     }
@@ -908,20 +908,30 @@ footer {
         position: absolute;
         left: 0;
         top: 0;
+        width: 3rem !important;
+        /* reduced from 4rem */
+        height: 3rem !important;
+    }
+
+    .timeline-icon i,
+    .timeline-icon svg {
+        font-size: 1.2rem !important;
+        width: 1.4rem !important;
+        height: 1.4rem !important;
     }
 
     .timeline::before {
-        left: 2rem;
-        /* center of the 4rem icon */
+        left: 1.5rem;
+        /* center of the 3rem icon */
     }
 
     .timeline-content {
         padding: 1rem;
-        width: calc(100vw - 6rem) !important;
-        /* viewport width minus icon + padding */
+        width: calc(100vw - 4.5rem) !important;
+        /* more space for content */
         max-width: 100%;
         box-sizing: border-box;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .timeline-content img {
@@ -938,10 +948,10 @@ footer {
     }
 
     .timeline-photo-circle {
-        width: 140px !important;
-        height: 140px !important;
-        max-width: 140px !important;
-        max-height: 140px !important;
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
     }
 
     /* Stack content vertically on mobile */
@@ -954,7 +964,7 @@ footer {
     .timeline-text {
         min-width: 0 !important;
         width: 100% !important;
-        text-align: center;
+        text-align: left;
     }
 
     .countdown {
